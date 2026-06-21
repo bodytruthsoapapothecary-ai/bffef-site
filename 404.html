@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Bodytruth Family Farms Educational Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-green:#2d6a1f; --bright-green:#62af41; --forest:#1a3a1f;
+      --amber:#e8a020; --teal:#2a8a7e; --white:#ffffff; --warm-white:#fafaf8;
+      --near-black:#1a1a1a; --text-muted:#6b6b6b; --radius-sm:6px; --radius-lg:18px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:var(--forest);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;-webkit-font-smoothing:antialiased;}
+    .container{max-width:560px;}
+    .logo{height:40px;width:auto;margin:0 auto 3rem;}
+    .four{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(6rem,20vw,10rem);color:rgba(98,175,65,0.15);line-height:1;letter-spacing:-0.05em;margin-bottom:0;}
+    h1{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(1.5rem,4vw,2.2rem);color:var(--white);letter-spacing:-0.02em;margin-bottom:1rem;}
+    p{font-family:'Lora',Georgia,serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:2.5rem;}
+    .links{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+    .btn{display:inline-flex;align-items:center;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;padding:0.8rem 1.6rem;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all 0.18s ease;text-decoration:none;min-height:48px;}
+    .btn-green{background:var(--bright-green);color:var(--white);}
+    .btn-green:hover{background:var(--deep-green);}
+    .btn-outline{background:transparent;color:rgba(255,255,255,0.75);border:1.5px solid rgba(255,255,255,0.25);}
+    .btn-outline:hover{border-color:rgba(255,255,255,0.6);color:var(--white);}
+    .footer-stripe{position:fixed;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--bright-green) 0%,var(--teal) 50%,var(--amber) 100%);}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png"
+      alt="Bodytruth Family Farms Educational Foundation" class="logo"
+      onerror="this.style.display='none';">
+    <div class="four" aria-hidden="true">404</div>
+    <h1>This page hasn't been planted yet.</h1>
+    <p>The link you followed doesn't exist — or the page moved. Either way, there's plenty of good ground to explore from here.</p>
+    <div class="links">
+      <a href="/index.html" class="btn btn-green">Back to Home →</a>
+      <a href="/our-story.html" class="btn btn-outline">Our Story</a>
+      <a href="/earth-keepers.html" class="btn btn-outline">Earth Keepers</a>
+      <a href="/partner.html" class="btn btn-outline">Partner With Us</a>
+    </div>
+  </div>
+  <div class="footer-stripe" aria-hidden="true"></div>
+</body>
+</html>

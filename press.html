@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In the News — Bodytruth Family Farms Educational Foundation. Press coverage, media features, and external recognition of the Foundation's work.">
+  <title>In the News — Bodytruth Family Farms Educational Foundation, Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-green:#2d6a1f; --bright-green:#62af41; --forest:#1a3a1f;
+      --amber:#e8a020; --amber-light:#fdf3dc; --teal:#2a8a7e;
+      --white:#ffffff; --warm-white:#fafaf8; --near-black:#1a1a1a;
+      --text-body:#2c2c2c; --text-muted:#6b6b6b; --rule:rgba(0,0,0,0.08);
+      --max-width:1200px; --nav-height:68px; --radius:10px; --radius-sm:6px; --radius-lg:18px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;font-size:1.125rem;line-height:1.75;color:var(--text-body);background:var(--white);-webkit-font-smoothing:antialiased;}
+    img{display:block;max-width:100%;height:auto;}
+    a{color:inherit;text-decoration:none;}
+    h1{font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-0.03em;line-height:1.0;}
+    h2{font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.1;font-size:clamp(1.9rem,4vw,2.9rem);}
+    .lora{font-family:'Lora',Georgia,serif;font-size:clamp(1.05rem,2vw,1.2rem);line-height:1.9;}
+    .eyebrow{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--bright-green);margin-bottom:0.9rem;}
+    .eyebrow--white{color:rgba(255,255,255,0.65);}
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:0 1.5rem;}
+    @media(min-width:768px){.wrap{padding:0 2.5rem;}}
+    .section{padding:5.5rem 0;}
+    @media(min-width:768px){.section{padding:7rem 0;}}
+    .btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;padding:0.9rem 1.9rem;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all 0.18s ease;min-height:52px;}
+    .btn-green{background:var(--bright-green);color:var(--white);}
+    .btn-green:hover{background:var(--deep-green);}
+    .page-body{padding-top:var(--nav-height);}
+    header.site-header{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-height);background:var(--forest);border-bottom:1px solid rgba(255,255,255,0.07);}
+    .header-inner{max-width:var(--max-width);margin:0 auto;padding:0 1.5rem;height:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}
+    @media(min-width:768px){.header-inner{padding:0 2.5rem;}}
+    .nav-logo img{height:36px;width:auto;}
+    .nav-logo-fallback{font-family:'Inter',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-0.02em;display:none;}
+    .wm-body{color:#ffffff;}.wm-farms{color:var(--bright-green);}
+    .nav-links{display:none;align-items:center;gap:0.15rem;list-style:none;}
+    @media(min-width:860px){.nav-links{display:flex;}}
+    .nav-links a{font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.8);padding:0.4rem 0.8rem;border-radius:var(--radius-sm);transition:color 0.15s,background 0.15s;}
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,0.08);}
+    .nav-links a.active{color:var(--bright-green);}
+    .nav-cta{display:none;}
+    @media(min-width:860px){.nav-cta{display:block;}}
+    .hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:8px 6px;border-radius:var(--radius-sm);}
+    @media(min-width:860px){.hamburger{display:none;}}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.85);border-radius:2px;transition:all 0.22s ease;transform-origin:center;}
+    .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+    .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;background:var(--forest);border-bottom:3px solid var(--bright-green);padding:1.25rem 1.5rem 1.75rem;}
+    .mobile-menu.open{display:block;}
+    @media(min-width:860px){.mobile-menu{display:none !important;}}
+    .mobile-menu ul{list-style:none;margin-bottom:1.25rem;}
+    .mobile-menu li{border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-menu a{display:block;font-size:1rem;font-weight:500;color:rgba(255,255,255,0.85);padding:0.8rem 0.5rem;}
+    .mobile-menu a:hover{color:var(--bright-green);}
+    .about-hub{background:var(--warm-white);padding:2.5rem 0;border-bottom:1px solid var(--rule);}
+    .hub-links{display:flex;flex-wrap:wrap;gap:0.75rem;}
+    .hub-link{font-size:0.88rem;font-weight:600;color:var(--text-muted);padding:0.5rem 1rem;border-radius:100px;border:1.5px solid var(--rule);background:var(--white);transition:all 0.15s;}
+    .hub-link:hover{border-color:var(--bright-green);color:var(--deep-green);}
+    .hub-link.active{border-color:var(--bright-green);color:var(--deep-green);background:rgba(98,175,65,0.06);}
+    .press-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem 2.25rem;border:1.5px solid var(--rule);margin-bottom:1.25rem;}
+    .press-pub{font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--bright-green);margin-bottom:0.5rem;}
+    .press-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.1rem;color:var(--near-black);margin-bottom:0.5rem;}
+    .press-card p{font-size:0.93rem;color:var(--text-muted);line-height:1.75;margin-bottom:0;}
+    .press-note{font-size:0.8rem;font-style:italic;color:rgba(0,0,0,0.35);margin-top:0.5rem;}
+    footer.site-footer{background:var(--forest);color:rgba(255,255,255,0.75);padding:4rem 0 0;}
+    .footer-grid{display:grid;grid-template-columns:1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08);}
+    @media(min-width:640px){.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(min-width:900px){.footer-grid{grid-template-columns:1.8fr 1fr 1fr;}}
+    .footer-logo{height:34px;width:auto;margin-bottom:1.1rem;}
+    .footer-logo-fallback{font-family:'Inter',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:1rem;display:none;}
+    .footer-mission{font-size:0.875rem;line-height:1.75;color:rgba(255,255,255,0.5);max-width:300px;margin-bottom:1rem;}
+    .footer-location{font-size:0.8rem;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.4rem;}
+    .footer-nav-col h4{font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--bright-green);margin-bottom:1.1rem;}
+    .footer-nav-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+    .footer-nav-col a{font-size:0.875rem;color:rgba(255,255,255,0.5);transition:color 0.15s;}
+    .footer-nav-col a:hover{color:var(--white);}
+    .footer-bottom{padding:1.5rem 0;display:flex;flex-direction:column;gap:0.5rem;align-items:center;text-align:center;}
+    @media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;text-align:left;}}
+    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3);}
+    .footer-legal{display:flex;gap:1.5rem;}
+    .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.3);transition:color 0.15s;}
+    .footer-legal a:hover{color:rgba(255,255,255,0.65);}
+    .footer-stripe{height:4px;background:linear-gradient(90deg,var(--bright-green) 0%,var(--teal) 50%,var(--amber) 100%);}
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="/index.html" class="nav-logo" aria-label="Home">
+      <img src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png" alt="Bodytruth Family Farms Educational Foundation, Inc." height="36" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="nav-logo-fallback" aria-hidden="true"><span class="wm-body">bodytruth</span><span class="wm-farms">farms</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+        <li><a href="/beliefs.html" class="active">About</a></li>
+        <li><a href="/partner.html">Partner With Us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta"><a href="/index.html#join" class="btn btn-green">Join the Work</a></div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul role="list">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/our-story.html">Our Story</a></li>
+    <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+    <li><a href="/beliefs.html">About</a></li>
+    <li><a href="/partner.html">Partner With Us</a></li>
+  </ul>
+  <a href="/index.html#join" class="btn btn-green" style="width:100%;justify-content:center;margin-top:0.5rem;">Join the Work</a>
+</nav>
+
+<main class="page-body">
+
+  <section style="background:var(--forest);padding:6rem 0 5rem;" aria-label="In the news">
+    <div class="wrap">
+      <div style="max-width:760px;">
+        <span class="eyebrow eyebrow--white">In the News</span>
+        <h1 style="font-size:clamp(2.8rem,7vw,4.5rem);color:var(--white);margin-bottom:1.5rem;">
+          The Work, <span style="font-family:'Lora',Georgia,serif;font-style:italic;color:var(--bright-green);font-weight:400;">Documented.</span>
+        </h1>
+        <p style="font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(1.05rem,2vw,1.2rem);color:rgba(255,255,255,0.8);line-height:1.85;">
+          Seventeen years of work. Three press features. The work was happening long before anyone was documenting it — and what got documented is here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-hub" role="navigation" aria-label="About section navigation">
+    <div class="wrap">
+      <div class="hub-links">
+        <a href="/beliefs.html" class="hub-link">What We Believe</a>
+        <a href="/impact.html" class="hub-link">Our Impact</a>
+        <a href="/transparency.html" class="hub-link">Transparency</a>
+        <a href="/press.html" class="hub-link active">In the News</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--warm-white);" aria-label="Press coverage">
+    <div class="wrap">
+      <div style="max-width:760px;">
+        <span class="eyebrow">Press Coverage</span>
+        <h2 style="margin-bottom:2.5rem;">What Others Have Said.</h2>
+
+        <!-- Mother Earth News -->
+        <div class="press-card">
+          <p class="press-pub">Mother Earth News · National · 2021</p>
+          <h3>Bodytruth Farms Featured — Food Sovereignty and Community Agriculture</h3>
+          <p>Mother Earth News — the national publication covering sustainable living, organic gardening, and food sovereignty since 1970 — featured Stephanie Willis and the Bodytruth Farms work in 2021. The feature documented the community agriculture model, the soap apothecary, and the teaching program built from a Detroit backyard over more than a decade.</p>
+          <p class="press-note">Feature available through Mother Earth News archives.</p>
+        </div>
+
+        <!-- Lawrence Times 2020 -->
+        <div class="press-card">
+          <p class="press-pub">Lawrence Times · Lawrence, Kansas · 2020</p>
+          <h3>Community Food Pantry Network — Bodytruth and the Lawrence Community Response</h3>
+          <p>The Lawrence Times covered the community food pantry network organized by Stephanie Willis and her son Christopher Sherald during the COVID-19 pandemic. The network — built through relationships with city council members, local businesses, and community organizers — used the Bodytruth office as its coordination hub and distributed food to Lawrence's most vulnerable residents throughout the crisis.</p>
+          <p class="press-note">Archives available through the Lawrence Times. Article may be behind paywall.</p>
+        </div>
+
+        <!-- Lawrence Times 2019 -->
+        <div class="press-card">
+          <p class="press-pub">Lawrence Times · Lawrence, Kansas · 2019</p>
+          <h3>Bodytruth — Community Gathering Place and Local Enterprise</h3>
+          <p>The Lawrence Times documented the opening and community impact of the Bodytruth brick-and-mortar store in Lawrence, Kansas — the store that became a gathering place, a teaching space, and the operational heart of a citywide community network.</p>
+          <p class="press-note">Archives available through the Lawrence Times. Article may be behind paywall.</p>
+        </div>
+
+        <!-- Media inquiry -->
+        <div style="margin-top:3rem; padding:2rem 2.25rem; background:var(--forest); border-radius:var(--radius-lg);">
+          <p style="font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--bright-green); margin-bottom:0.75rem;">Media Inquiries</p>
+          <p style="font-family:'Lora',Georgia,serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.82);line-height:1.8;margin-bottom:1.25rem;">
+            Journalists, documentary filmmakers, and podcast hosts covering food sovereignty, community wealth building, veteran entrepreneurship, or nonprofit methodology are welcome to reach out. We respond to every serious media inquiry within 48 hours.
+          </p>
+          <a href="/index.html#join" class="btn btn-green" style="font-size:0.9rem; min-height:44px; padding:0.75rem 1.5rem;">
+            Media Inquiry →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png" alt="Bodytruth Family Farms Educational Foundation, Inc." class="footer-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="footer-logo-fallback"><span class="wm-body">bodytruth</span><span class="wm-farms">farms</span></div>
+        <p class="footer-mission">Educating aspiring growers, veterans, and community members in food sovereignty, land-based wellness, and the business infrastructure of generational wealth.</p>
+        <p class="footer-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Southeast Michigan</p>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/our-story.html">Our Story</a></li>
+          <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+          <li><a href="/beliefs.html">What We Believe</a></li>
+          <li><a href="/impact.html">Our Impact</a></li>
+          <li><a href="/transparency.html">Transparency</a></li>
+          <li><a href="/press.html">In the News</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/partner.html">Partner With Us</a></li>
+          <li><a href="/earth-keepers.html#apply">Become an Earth Keeper</a></li>
+          <li><a href="/index.html#join">Join the Work</a></li>
+          <li><a href="/partner.html#partner-form">Land Offers</a></li>
+          <li><a href="/index.html#join">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · All rights reserved.</p>
+      <div class="footer-legal"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-use.html">Terms of Use</a></div>
+    </div>
+  </div>
+  <div class="footer-stripe" aria-hidden="true"></div>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const menu = document.getElementById('mobile-menu');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    menu.setAttribute('aria-hidden', expanded);
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.hamburger');
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    });
+  });
+</script>
+</body>
+</html>

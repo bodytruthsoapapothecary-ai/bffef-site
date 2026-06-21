@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Our Impact — Bodytruth Family Farms Educational Foundation. Theory of Change, what we measure, and projected outcomes for our first cohort year.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bodytruthfamilyfarms.org/impact.html">
+  <meta property="og:title" content="Our Impact — Bodytruth Family Farms Educational Foundation">
+  <meta property="og:description" content="Theory of Change, outcome framework, and projected Year One impact for the Foundation's FundReady Bootcamp programs.">
+  <meta property="og:image" content="https://www.bodytruthfamilyfarms.org/images/og-image.jpg">
+  <title>Our Impact — Bodytruth Family Farms Educational Foundation, Inc.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep-green:   #2d6a1f;
+      --bright-green: #62af41;
+      --forest:       #1a3a1f;
+      --amber:        #e8a020;
+      --amber-light:  #fdf3dc;
+      --teal:         #2a8a7e;
+      --teal-light:   #e6f5f3;
+      --white:        #ffffff;
+      --warm-white:   #fafaf8;
+      --near-black:   #1a1a1a;
+      --text-body:    #2c2c2c;
+      --text-muted:   #6b6b6b;
+      --rule:         rgba(0,0,0,0.08);
+      --max-width:    1200px;
+      --nav-height:   68px;
+      --radius:       10px;
+      --radius-sm:    6px;
+      --radius-lg:    18px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.75; color: var(--text-body); background: var(--white); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    h1 { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 1.0; }
+    h2 { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(1.9rem, 4vw, 2.9rem); }
+    h3 { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; font-size: clamp(1.1rem, 2vw, 1.4rem); }
+    .lora { font-family: 'Lora', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
+    .lora-italic { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
+    .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bright-green); margin-bottom: 0.9rem; }
+    .eyebrow--amber { color: var(--amber); }
+    .eyebrow--teal  { color: var(--teal); }
+    .eyebrow--white { color: rgba(255,255,255,0.65); }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    @media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+    .section { padding: 5.5rem 0; }
+    @media (min-width: 768px) { .section { padding: 7rem 0; } }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; padding: 0.9rem 1.9rem; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: all 0.18s ease; min-height: 52px; }
+    .btn-green { background: var(--bright-green); color: var(--white); }
+    .btn-green:hover { background: var(--deep-green); }
+
+    /* HEADER */
+    .page-body { padding-top: var(--nav-height); }
+    header.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 999; height: var(--nav-height); background: var(--forest); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    @media (min-width: 768px) { .header-inner { padding: 0 2.5rem; } }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-fallback { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; display: none; }
+    .wm-body { color: #ffffff; }
+    .wm-farms { color: var(--bright-green); }
+    .nav-links { display: none; align-items: center; gap: 0.15rem; list-style: none; }
+    @media (min-width: 860px) { .nav-links { display: flex; } }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.8); padding: 0.4rem 0.8rem; border-radius: var(--radius-sm); transition: color 0.15s, background 0.15s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-links a.active { color: var(--bright-green); }
+    .nav-cta { display: none; }
+    @media (min-width: 860px) { .nav-cta { display: block; } }
+    .hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 8px 6px; border-radius: var(--radius-sm); }
+    @media (min-width: 860px) { .hamburger { display: none; } }
+    .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.85); border-radius: 2px; transition: all 0.22s ease; transform-origin: center; }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; z-index: 998; background: var(--forest); border-bottom: 3px solid var(--bright-green); padding: 1.25rem 1.5rem 1.75rem; }
+    .mobile-menu.open { display: block; }
+    @media (min-width: 860px) { .mobile-menu { display: none !important; } }
+    .mobile-menu ul { list-style: none; margin-bottom: 1.25rem; }
+    .mobile-menu li { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mobile-menu a { display: block; font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.85); padding: 0.8rem 0.5rem; }
+    .mobile-menu a:hover { color: var(--bright-green); }
+
+    /* ABOUT HUB */
+    .about-hub { background: var(--warm-white); padding: 2.5rem 0; border-bottom: 1px solid var(--rule); }
+    .hub-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .hub-link { font-size: 0.88rem; font-weight: 600; color: var(--text-muted); padding: 0.5rem 1rem; border-radius: 100px; border: 1.5px solid var(--rule); background: var(--white); transition: all 0.15s; }
+    .hub-link:hover { border-color: var(--bright-green); color: var(--deep-green); }
+    .hub-link.active { border-color: var(--bright-green); color: var(--deep-green); background: rgba(98,175,65,0.06); }
+
+    /* THEORY OF CHANGE */
+    .toc-flow {
+      display: flex; flex-direction: column; gap: 0; max-width: 760px; margin-top: 3rem;
+    }
+    .toc-step {
+      display: flex; gap: 1.5rem; padding-bottom: 2rem; position: relative;
+    }
+    .toc-step:not(:last-child)::before {
+      content: ''; position: absolute; left: 1.4rem; top: 2.8rem; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--bright-green), rgba(98,175,65,0.1));
+    }
+    .toc-num {
+      width: 2.8rem; height: 2.8rem; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.9rem;
+      color: var(--white); background: var(--bright-green);
+    }
+    .toc-content h3 { font-size: 1rem; font-weight: 700; color: var(--near-black); margin-bottom: 0.4rem; }
+    .toc-content p { font-size: 0.93rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* METRICS */
+    .metrics-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.25rem; margin-top: 2.5rem; max-width: 860px;
+    }
+    @media (min-width: 640px) { .metrics-grid { grid-template-columns: repeat(4, 1fr); } }
+    .metric-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem; border: 1.5px solid var(--rule); text-align: center;
+    }
+    .metric-num { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 2.25rem; color: var(--deep-green); line-height: 1; margin-bottom: 0.4rem; }
+    .metric-label { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); line-height: 1.4; }
+
+    /* FOOTER */
+    footer.site-footer { background: var(--forest); color: rgba(255,255,255,0.75); padding: 4rem 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    @media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .footer-grid { grid-template-columns: 1.8fr 1fr 1fr; } }
+    .footer-logo { height: 34px; width: auto; margin-bottom: 1.1rem; }
+    .footer-logo-fallback { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.05rem; margin-bottom: 1rem; display: none; }
+    .footer-mission { font-size: 0.875rem; line-height: 1.75; color: rgba(255,255,255,0.5); max-width: 300px; margin-bottom: 1rem; }
+    .footer-location { font-size: 0.8rem; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 0.4rem; }
+    .footer-nav-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bright-green); margin-bottom: 1.1rem; }
+    .footer-nav-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-nav-col a { font-size: 0.875rem; color: rgba(255,255,255,0.5); transition: color 0.15s; }
+    .footer-nav-col a:hover { color: var(--white); }
+    .footer-bottom { padding: 1.5rem 0; display: flex; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; }
+    @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.75rem; color: rgba(255,255,255,0.3); transition: color 0.15s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.65); }
+    .footer-stripe { height: 4px; background: linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%); }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="/index.html" class="nav-logo" aria-label="Bodytruth Family Farms Educational Foundation — Home">
+      <img src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png"
+        alt="Bodytruth Family Farms Educational Foundation, Inc." height="36"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="nav-logo-fallback" aria-hidden="true">
+        <span class="wm-body">bodytruth</span><span class="wm-farms">farms</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+        <li><a href="/beliefs.html" class="active">About</a></li>
+        <li><a href="/partner.html">Partner With Us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta"><a href="/index.html#join" class="btn btn-green">Join the Work</a></div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul role="list">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/our-story.html">Our Story</a></li>
+    <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+    <li><a href="/beliefs.html">About</a></li>
+    <li><a href="/partner.html">Partner With Us</a></li>
+  </ul>
+  <a href="/index.html#join" class="btn btn-green" style="width:100%; justify-content:center; margin-top:0.5rem;">Join the Work</a>
+</nav>
+
+<main class="page-body">
+
+  <!-- HERO -->
+  <section style="background:var(--forest); padding:6rem 0 5rem; position:relative; overflow:hidden;" aria-label="Our impact">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 80% 50%, rgba(98,175,65,0.08) 0%, transparent 60%);"></div>
+    <div class="wrap" style="position:relative; z-index:1;">
+      <div style="max-width:760px;">
+        <span class="eyebrow eyebrow--white">Our Impact</span>
+        <h1 style="font-size:clamp(2.8rem,7vw,4.5rem); color:var(--white); margin-bottom:1.5rem;">
+          We measure what <span style="font-family:'Lora',Georgia,serif; font-style:italic; color:var(--bright-green); font-weight:400;">matters.</span>
+        </h1>
+        <p class="lora-italic" style="color:rgba(255,255,255,0.8);">
+          Impact at the formation stage is not a count of activities. It is a documented theory of what change looks like, how we will know when it happens, and what we are building toward. This page is honest about where we are and clear about where we are going.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT HUB NAV -->
+  <div class="about-hub" role="navigation" aria-label="About section navigation">
+    <div class="wrap">
+      <div class="hub-links">
+        <a href="/beliefs.html" class="hub-link">What We Believe</a>
+        <a href="/impact.html" class="hub-link active">Our Impact</a>
+        <a href="/transparency.html" class="hub-link">Transparency</a>
+        <a href="/press.html" class="hub-link">In the News</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHERE WE ARE -->
+  <section class="section" style="background:var(--amber-light);" aria-label="Where we are right now">
+    <div class="wrap">
+      <div style="max-width:760px;">
+        <span class="eyebrow eyebrow--amber">Formation Stage · 2026</span>
+        <h2>Where We Are Right Now.</h2>
+        <p class="lora" style="margin-top:1.25rem;">
+          Bodytruth Family Farms Educational Foundation, Inc. was incorporated in 2026. We are in active pre-launch — programs designed, cohorts scheduled, methodology documented and patent-pending. Our first cohort begins July 28, 2026.
+        </p>
+        <p class="lora">
+          The numbers on this page are projected — based on our cohort model, our methodology's track record through FundReady LLC, and conservative estimates grounded in what we know about the population we serve. We will update this page with real data as each cohort completes.
+        </p>
+        <div style="margin-top:2rem; padding:1.5rem 2rem; background:var(--white); border-radius:var(--radius-lg); border:1px solid rgba(232,160,32,0.2);">
+          <p style="font-size:0.9rem; color:var(--text-muted); margin:0; line-height:1.75;">
+            <strong style="color:var(--near-black);">A note on projected numbers:</strong> We present projections not as certainty but as documented targets — the outcomes we are designing toward, the benchmarks we will hold ourselves accountable to, and the evidence base we will build from. Funders and partners can expect these projections to be updated with real cohort data beginning Q4 2026.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEORY OF CHANGE -->
+  <section class="section" style="background:var(--white);" aria-label="Theory of change">
+    <div class="wrap">
+      <span class="eyebrow">Theory of Change</span>
+      <h2>If We Do This, That Happens.</h2>
+      <p style="margin-top:1rem; color:var(--text-muted); max-width:640px;">
+        A Theory of Change is not a hope. It is a documented logic — the causal chain between what we do and what we believe will result. This is ours.
+      </p>
+
+      <div class="toc-flow">
+        <div class="toc-step">
+          <div class="toc-num">1</div>
+          <div class="toc-content">
+            <h3>We enroll participants with ideas, land, or enterprises at any stage</h3>
+            <p>Aspiring growers, aspiring entrepreneurs, community builders, and veterans — ages 18–59 — who have been excluded from conventional business development programs because they don't fit existing eligibility criteria. No boxes required.</p>
+          </div>
+        </div>
+        <div class="toc-step">
+          <div class="toc-num">2</div>
+          <div class="toc-content">
+            <h3>We deliver 40 hours of structured capital readiness training</h3>
+            <p>Over 8 weeks, participants investigate their own context — their land, their production systems, their community, their constraints — and build a Capital Plan, Fundable Assets, and documented systems grounded in their specific reality, not a template.</p>
+          </div>
+        </div>
+        <div class="toc-step">
+          <div class="toc-num">3</div>
+          <div class="toc-content">
+            <h3>Participants leave with cognitive capacity, not just documents</h3>
+            <p>The goal is not a completed business plan. The goal is a person who can think like the architect of their own enterprise — who can evaluate opportunities, make decisions with incomplete information, and rebuild when circumstances change.</p>
+          </div>
+        </div>
+        <div class="toc-step">
+          <div class="toc-num">4</div>
+          <div class="toc-content">
+            <h3>That capacity translates into fundable, operational enterprises</h3>
+            <p>Participants who understand their own enterprise structure qualify for capital sources previously inaccessible to them — grants, CDFI loans, government contracts, and earned income streams. The infrastructure they built makes the doors open.</p>
+          </div>
+        </div>
+        <div class="toc-step">
+          <div class="toc-num">5</div>
+          <div class="toc-content">
+            <h3>Those enterprises generate community wealth and food sovereignty</h3>
+            <p>Each operational enterprise creates employment, grows food, builds local economic infrastructure, and demonstrates a replicable model. Over time, the knowledge spreads — through Earth Keepers, through participants who become mentors, through communities that build what they watched one person build.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTED YEAR ONE IMPACT -->
+  <section class="section" style="background:var(--warm-white);" aria-label="Projected year one impact">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--teal">Year One Projections · 2026–2027</span>
+      <h2>What We Are Building Toward.</h2>
+      <p style="margin-top:1rem; color:var(--text-muted); max-width:640px; margin-bottom:0;">
+        Three cohorts. Conservative baseline of 12 participants per cohort. These are the outcomes we are designing for and will report against.
+      </p>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">36</div>
+          <div class="metric-label">Participants served<br>(3 cohorts × 12 minimum)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">36</div>
+          <div class="metric-label">Capital Plans produced<br>and documented</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">36</div>
+          <div class="metric-label">Fundable Assets<br>completed</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">85%</div>
+          <div class="metric-label">Target cohort<br>completion rate</div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; max-width:860px;">
+        <h3 style="margin-bottom:1.5rem; font-size:1.1rem;">What We Will Measure</h3>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:1rem;">
+          <div style="padding:1.5rem; background:var(--white); border-radius:var(--radius-lg); border:1.5px solid var(--rule);">
+            <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal); margin-bottom:0.75rem;">During Cohort — Leading Indicators</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--bright-green); font-weight:700; flex-shrink:0;">→</span>Cohort completion rate (target: 85%+)</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--bright-green); font-weight:700; flex-shrink:0;">→</span>Capital Plans completed per cohort</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--bright-green); font-weight:700; flex-shrink:0;">→</span>CapScore baseline and end-of-cohort score</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--bright-green); font-weight:700; flex-shrink:0;">→</span>Participant self-reported confidence (pre/post survey)</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--bright-green); font-weight:700; flex-shrink:0;">→</span>Number of Fundable Assets produced</li>
+            </ul>
+          </div>
+          <div style="padding:1.5rem; background:var(--white); border-radius:var(--radius-lg); border:1.5px solid var(--rule);">
+            <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--amber); margin-bottom:0.75rem;">6–12 Months After — Lagging Indicators</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--amber); font-weight:700; flex-shrink:0;">→</span>Capital secured by participants (grants, loans, contracts)</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--amber); font-weight:700; flex-shrink:0;">→</span>Enterprises launched or formalized</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--amber); font-weight:700; flex-shrink:0;">→</span>Revenue generated by participant enterprises</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--amber); font-weight:700; flex-shrink:0;">→</span>Jobs created within participant enterprises</li>
+              <li style="display:flex; gap:0.6rem; font-size:0.93rem; color:var(--text-body);"><span style="color:var(--amber); font-weight:700; flex-shrink:0;">→</span>Participants who return as Earth Keepers or mentors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROWTH POTENTIAL -->
+  <section class="section" style="background:var(--forest); color:var(--white);" aria-label="Growth potential">
+    <div class="wrap">
+      <div style="max-width:760px;">
+        <span class="eyebrow eyebrow--white">Looking Forward</span>
+        <h2 style="color:var(--white); margin-bottom:1.25rem;">What Scales.</h2>
+        <p class="lora" style="color:rgba(255,255,255,0.82); margin-bottom:1.25rem;">
+          The FundReady methodology is not location-dependent. Bootcamps are delivered online. A participant in Southeast Michigan is in the same cohort as a participant in Atlanta or Kansas City. The Land Enterprise track is the only program component that requires physical land — and that is the component we are actively building toward in Southeast Michigan.
+        </p>
+        <p class="lora" style="color:rgba(255,255,255,0.82); margin-bottom:1.25rem;">
+          At 18–24 participants per cohort — our aspirational target — three cohorts serve 54–72 people in Year One. At organizational scale with partner delivery through CDFIs and workforce development organizations, the methodology reaches hundreds of participants annually without requiring proportional growth in Foundation staffing.
+        </p>
+        <p class="lora" style="color:rgba(255,255,255,0.82);">
+          That is what a replicable methodology makes possible. That is what we are building.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png"
+          alt="Bodytruth Family Farms Educational Foundation, Inc." class="footer-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="footer-logo-fallback"><span class="wm-body">bodytruth</span><span class="wm-farms">farms</span></div>
+        <p class="footer-mission">Educating aspiring growers, veterans, and community members in food sovereignty, land-based wellness, and the business infrastructure of generational wealth.</p>
+        <p class="footer-location">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Southeast Michigan
+        </p>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/our-story.html">Our Story</a></li>
+          <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+          <li><a href="/beliefs.html">What We Believe</a></li>
+          <li><a href="/impact.html">Our Impact</a></li>
+          <li><a href="/transparency.html">Transparency</a></li>
+          <li><a href="/press.html">In the News</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/partner.html">Partner With Us</a></li>
+          <li><a href="/earth-keepers.html#apply">Become an Earth Keeper</a></li>
+          <li><a href="/index.html#join">Join the Work</a></li>
+          <li><a href="/partner.html#partner-form">Land Offers</a></li>
+          <li><a href="/index.html#join">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-stripe" aria-hidden="true"></div>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const menu = document.getElementById('mobile-menu');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    menu.setAttribute('aria-hidden', expanded);
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.hamburger');
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    });
+  });
+</script>
+</body>
+</html>
