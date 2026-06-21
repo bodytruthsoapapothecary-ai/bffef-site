@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.bodytruthfamilyfarms.org/sitemap.xml
+
+# We want to be found. Index everything.
+# This site is a knowledge hub for food sovereignty, land-based enterprise,
+# workforce development, veteran entrepreneurship, and grant readiness.

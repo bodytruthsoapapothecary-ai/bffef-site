@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Use — Bodytruth Family Farms Educational Foundation, Inc. Plain language terms for using this website and engaging with our programs.">
+  <title>Terms of Use — Bodytruth Family Farms Educational Foundation, Inc.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep-green:   #2d6a1f;
+      --bright-green: #62af41;
+      --forest:       #1a3a1f;
+      --amber:        #e8a020;
+      --teal:         #2a8a7e;
+      --white:        #ffffff;
+      --warm-white:   #fafaf8;
+      --near-black:   #1a1a1a;
+      --text-body:    #2c2c2c;
+      --text-muted:   #6b6b6b;
+      --rule:         rgba(0,0,0,0.08);
+      --max-width:    1200px;
+      --nav-height:   68px;
+      --radius:       10px;
+      --radius-sm:    6px;
+      --radius-lg:    18px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      background: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a   { color: var(--deep-green); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--bright-green); }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--near-black);
+    }
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      color: var(--near-black);
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    p  { margin-bottom: 1rem; color: var(--text-body); line-height: 1.8; }
+    ul { margin: 0.75rem 0 1rem 1.5rem; }
+    ul li { margin-bottom: 0.4rem; line-height: 1.7; }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+
+    /* HEADER */
+    .page-body { padding-top: var(--nav-height); }
+    header.site-header {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 999; height: var(--nav-height);
+      background: var(--forest);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .header-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 0 1.5rem; height: 100%;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1.5rem;
+    }
+    @media (min-width: 768px) { .header-inner { padding: 0 2.5rem; } }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-fallback {
+      font-family: 'Inter', sans-serif; font-weight: 800;
+      font-size: 1.1rem; letter-spacing: -0.02em; display: none;
+    }
+    .wm-body  { color: #ffffff; }
+    .wm-farms { color: var(--bright-green); }
+    .nav-links {
+      display: none; align-items: center;
+      gap: 0.15rem; list-style: none;
+    }
+    @media (min-width: 860px) { .nav-links { display: flex; } }
+    .nav-links a {
+      font-size: 0.9rem; font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-sm);
+      transition: color 0.15s, background 0.15s;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-cta { display: none; }
+    @media (min-width: 860px) { .nav-cta { display: block; } }
+    .btn {
+      display: inline-flex; align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem; font-weight: 600;
+      padding: 0.9rem 1.9rem;
+      border-radius: var(--radius-sm);
+      border: none; cursor: pointer;
+      transition: all 0.18s ease;
+      min-height: 52px; text-decoration: none;
+    }
+    .btn-green  { background: var(--bright-green); color: var(--white); }
+    .btn-green:hover  { background: var(--deep-green); }
+    .hamburger {
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 5px;
+      width: 40px; height: 40px;
+      background: none; border: none; cursor: pointer;
+      padding: 8px 6px; border-radius: var(--radius-sm);
+    }
+    @media (min-width: 860px) { .hamburger { display: none; } }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 2px; transition: all 0.22s ease;
+      transform-origin: center;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none; position: fixed;
+      top: var(--nav-height); left: 0; right: 0;
+      z-index: 998; background: var(--forest);
+      border-bottom: 3px solid var(--bright-green);
+      padding: 1.25rem 1.5rem 1.75rem;
+    }
+    .mobile-menu.open { display: block; }
+    @media (min-width: 860px) { .mobile-menu { display: none !important; } }
+    .mobile-menu ul { list-style: none; margin-bottom: 1.25rem; margin-left: 0; }
+    .mobile-menu li { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mobile-menu a {
+      display: block; font-size: 1rem; font-weight: 500;
+      color: rgba(255,255,255,0.85); padding: 0.8rem 0.5rem;
+      text-decoration: none;
+    }
+    .mobile-menu a:hover { color: var(--bright-green); }
+
+    /* PAGE CONTENT */
+    .policy-hero {
+      background: var(--forest);
+      padding: 4rem 0 3.5rem;
+    }
+    .policy-hero h1 { color: var(--white); margin-bottom: 0.75rem; }
+    .policy-hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .policy-body { padding: 4rem 0 6rem; }
+    .policy-inner { max-width: 760px; }
+
+    .policy-intro {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .policy-section {
+      padding: 1.75rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--rule);
+    }
+    .policy-section h2 {
+      color: var(--deep-green);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .policy-section h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 1.1em;
+      background: var(--bright-green);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .policy-section p { margin-bottom: 0.75rem; font-size: 0.975rem; }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul { font-size: 0.975rem; }
+
+    .policy-contact {
+      margin-top: 2.5rem;
+      padding: 1.5rem 1.75rem;
+      background: rgba(98,175,65,0.06);
+      border: 1px solid rgba(98,175,65,0.2);
+      border-radius: var(--radius-lg);
+      font-size: 0.95rem;
+    }
+    .policy-updated {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: var(--forest);
+      color: rgba(255,255,255,0.75);
+      padding: 3rem 0 0;
+    }
+    .footer-bottom {
+      padding: 1.5rem 0;
+      display: flex; flex-direction: column;
+      gap: 0.5rem; align-items: center; text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    @media (min-width: 640px) {
+      .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a {
+      font-size: 0.75rem; color: rgba(255,255,255,0.3);
+      transition: color 0.15s; text-decoration: none;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.65); }
+    .footer-stripe {
+      height: 4px;
+      background: linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="/index.html" class="nav-logo" aria-label="Bodytruth Family Farms Educational Foundation — Home">
+      <img
+        src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png"
+        alt="Bodytruth Family Farms Educational Foundation, Inc."
+        height="36"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <span class="nav-logo-fallback" aria-hidden="true">
+        <span class="wm-body">bodytruth</span><span class="wm-farms">farms</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+        <li><a href="/index.html#join">Partner With Us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="/index.html#join" class="btn btn-green">Join the Work</a>
+    </div>
+    <button
+      class="hamburger" aria-label="Open menu"
+      aria-expanded="false" aria-controls="mobile-menu"
+      onclick="toggleMenu(this)"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul role="list">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/our-story.html">Our Story</a></li>
+    <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+    <li><a href="/index.html#join">Partner With Us</a></li>
+  </ul>
+  <a href="/index.html#join" class="btn btn-green" style="width:100%; justify-content:center; margin-top:0.5rem;">Join the Work</a>
+</nav>
+
+<main class="page-body">
+
+  <div class="policy-hero">
+    <div class="wrap">
+      <h1>Terms of Use</h1>
+      <p>What you can expect from us, and what we ask of you.</p>
+    </div>
+  </div>
+
+  <div class="policy-body">
+    <div class="wrap">
+      <div class="policy-inner">
+
+        <p class="policy-intro">
+          By using this website or engaging with Bodytruth Family Farms Educational Foundation, Inc. — whether as a program participant, Earth Keeper, funder, partner, or visitor — you agree to these terms. We've written them in plain language because we believe clarity is a form of respect.
+        </p>
+
+        <div class="policy-section">
+          <h2>Who We Are</h2>
+          <p>Bodytruth Family Farms Educational Foundation, Inc. is a nonprofit organization incorporated in Michigan in 2026. Our mission is to educate aspiring growers, veterans, and community members in food sovereignty, land-based wellness, and business and workforce development.</p>
+          <p>We are in the process of obtaining 501(c)(3) tax-exempt status. Until that status is confirmed, donations made to the Foundation are not tax-deductible.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Use of This Website</h2>
+          <p>This website is provided for informational purposes and to facilitate connection with the Foundation's programs and community. You may use it to learn about our work, submit inquiries, and apply for programs.</p>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use this site for any unlawful purpose</li>
+            <li>Submit false or misleading information through our forms</li>
+            <li>Attempt to disrupt or compromise the security of the site</li>
+            <li>Reproduce or repurpose our content without permission</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>Program Participation</h2>
+          <p>Participation in Foundation programs — including Bootcamps, the Land Enterprise Collaborative, and the Earth Keepers volunteer program — is subject to enrollment terms provided at the time of application. Those terms will be clearly stated before you commit to anything.</p>
+          <p>We reserve the right to remove participants from programs for conduct that is disruptive, harmful, or inconsistent with the Foundation's values and community standards.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Media, Photography & Documentation</h2>
+          <p>The Foundation documents its programs and community through photography, video, and storytelling. This documentation is part of how we tell the story of the work and share impact with the broader public.</p>
+          <p>When you enroll in a program or join the Earth Keepers community, your enrollment form will include a clear media consent disclosure and an opt-out option. If you choose to opt out, your preference will be honored at every session — no explanation required and no questions asked.</p>
+          <p>Documentation involving minors requires explicit written consent from a parent or guardian prior to participation. This is non-negotiable and will be part of any youth program intake process.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Intellectual Property</h2>
+          <p>The content on this website — including written copy, design, images, program materials, and the FundReady methodology — is the property of Bodytruth Family Farms Educational Foundation, Inc. and its affiliated entities.</p>
+          <p>You may share links to this site and reference our work with attribution. You may not reproduce, copy, or adapt our materials without written permission.</p>
+          <p>The FundReady® methodology is a proprietary system. Inquiries about licensing or partnership should be directed to <a href="mailto:bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com">bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com</a>.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>No Warranties</h2>
+          <p>This website and its content are provided as-is. We make every effort to keep information accurate and up to date, but we cannot guarantee that everything on the site is complete, current, or error-free at all times.</p>
+          <p>Program availability, pricing, and dates are subject to change. The most current information will always be provided directly to enrolled participants.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Limitation of Liability</h2>
+          <p>To the fullest extent permitted by law, Bodytruth Family Farms Educational Foundation, Inc. is not liable for any indirect, incidental, or consequential damages arising from your use of this website or participation in Foundation programs.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Governing Law</h2>
+          <p>These terms are governed by the laws of the State of Michigan. Any disputes arising from these terms or your use of this website will be resolved in the courts of the State of Michigan.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Changes to These Terms</h2>
+          <p>We may update these terms as the Foundation grows and its programs evolve. When we do, we will update the date below. Your continued use of the site after changes are posted constitutes acceptance of the updated terms.</p>
+        </div>
+
+        <div class="policy-contact">
+          <strong>Questions about these terms?</strong> We're real people. Reach out directly:<br><br>
+          <a href="mailto:bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com">bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com</a><br>
+          Bodytruth Family Farms Educational Foundation, Inc.<br>
+          Southeast Michigan
+        </div>
+
+        <p class="policy-updated">Last updated: June 2026</p>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-stripe" aria-hidden="true"></div>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const menu = document.getElementById('mobile-menu');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    menu.setAttribute('aria-hidden', expanded);
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.hamburger');
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    });
+  });
+</script>
+
+</body>
+</html>

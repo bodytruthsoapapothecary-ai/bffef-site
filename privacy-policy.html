@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy — Bodytruth Family Farms Educational Foundation, Inc. We collect only what we need, we never sell your data, and you can opt out anytime.">
+  <title>Privacy Policy — Bodytruth Family Farms Educational Foundation, Inc.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep-green:   #2d6a1f;
+      --bright-green: #62af41;
+      --forest:       #1a3a1f;
+      --amber:        #e8a020;
+      --teal:         #2a8a7e;
+      --white:        #ffffff;
+      --warm-white:   #fafaf8;
+      --near-black:   #1a1a1a;
+      --text-body:    #2c2c2c;
+      --text-muted:   #6b6b6b;
+      --rule:         rgba(0,0,0,0.08);
+      --max-width:    1200px;
+      --nav-height:   68px;
+      --radius:       10px;
+      --radius-sm:    6px;
+      --radius-lg:    18px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      background: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a   { color: var(--deep-green); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--bright-green); }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--near-black);
+    }
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+      color: var(--near-black);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p  { margin-bottom: 1rem; color: var(--text-body); line-height: 1.8; }
+    ul { margin: 0.75rem 0 1rem 1.5rem; }
+    ul li { margin-bottom: 0.4rem; line-height: 1.7; }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+
+    /* HEADER */
+    .page-body { padding-top: var(--nav-height); }
+    header.site-header {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 999; height: var(--nav-height);
+      background: var(--forest);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .header-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 0 1.5rem; height: 100%;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1.5rem;
+    }
+    @media (min-width: 768px) { .header-inner { padding: 0 2.5rem; } }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-fallback {
+      font-family: 'Inter', sans-serif; font-weight: 800;
+      font-size: 1.1rem; letter-spacing: -0.02em; display: none;
+    }
+    .wm-body  { color: #ffffff; }
+    .wm-farms { color: var(--bright-green); }
+    .nav-links {
+      display: none; align-items: center;
+      gap: 0.15rem; list-style: none;
+    }
+    @media (min-width: 860px) { .nav-links { display: flex; } }
+    .nav-links a {
+      font-size: 0.9rem; font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-sm);
+      transition: color 0.15s, background 0.15s;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-cta { display: none; }
+    @media (min-width: 860px) { .nav-cta { display: block; } }
+    .btn {
+      display: inline-flex; align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem; font-weight: 600;
+      padding: 0.9rem 1.9rem;
+      border-radius: var(--radius-sm);
+      border: none; cursor: pointer;
+      transition: all 0.18s ease;
+      min-height: 52px; text-decoration: none;
+    }
+    .btn-green  { background: var(--bright-green); color: var(--white); }
+    .btn-green:hover  { background: var(--deep-green); }
+    .hamburger {
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 5px;
+      width: 40px; height: 40px;
+      background: none; border: none; cursor: pointer;
+      padding: 8px 6px; border-radius: var(--radius-sm);
+    }
+    @media (min-width: 860px) { .hamburger { display: none; } }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 2px; transition: all 0.22s ease;
+      transform-origin: center;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none; position: fixed;
+      top: var(--nav-height); left: 0; right: 0;
+      z-index: 998; background: var(--forest);
+      border-bottom: 3px solid var(--bright-green);
+      padding: 1.25rem 1.5rem 1.75rem;
+    }
+    .mobile-menu.open { display: block; }
+    @media (min-width: 860px) { .mobile-menu { display: none !important; } }
+    .mobile-menu ul { list-style: none; margin-bottom: 1.25rem; margin-left: 0; }
+    .mobile-menu li { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mobile-menu a {
+      display: block; font-size: 1rem; font-weight: 500;
+      color: rgba(255,255,255,0.85); padding: 0.8rem 0.5rem;
+      text-decoration: none;
+    }
+    .mobile-menu a:hover { color: var(--bright-green); }
+
+    /* PAGE CONTENT */
+    .policy-hero {
+      background: var(--forest);
+      padding: 4rem 0 3.5rem;
+    }
+    .policy-hero h1 { color: var(--white); margin-bottom: 0.75rem; }
+    .policy-hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .policy-body {
+      padding: 4rem 0 6rem;
+    }
+    .policy-inner {
+      max-width: 760px;
+    }
+
+    .policy-intro {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .policy-section {
+      padding: 1.75rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--rule);
+    }
+    .policy-section h2 {
+      margin-top: 0;
+      color: var(--deep-green);
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .policy-section h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 1.1em;
+      background: var(--bright-green);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .policy-section p { margin-bottom: 0.75rem; font-size: 0.975rem; }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul { font-size: 0.975rem; }
+
+    .policy-promise {
+      background: var(--forest);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      margin: 2rem 0;
+    }
+    .policy-promise p {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.75;
+      margin: 0;
+    }
+    .policy-promise strong { color: var(--bright-green); font-style: normal; }
+
+    .policy-contact {
+      margin-top: 2.5rem;
+      padding: 1.5rem 1.75rem;
+      background: rgba(98,175,65,0.06);
+      border: 1px solid rgba(98,175,65,0.2);
+      border-radius: var(--radius-lg);
+      font-size: 0.95rem;
+    }
+    .policy-contact a { color: var(--deep-green); }
+
+    .policy-updated {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: var(--forest);
+      color: rgba(255,255,255,0.75);
+      padding: 3rem 0 0;
+    }
+    .footer-bottom {
+      padding: 1.5rem 0;
+      display: flex; flex-direction: column;
+      gap: 0.5rem; align-items: center; text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    @media (min-width: 640px) {
+      .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a {
+      font-size: 0.75rem; color: rgba(255,255,255,0.3);
+      transition: color 0.15s; text-decoration: none;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.65); }
+    .footer-stripe {
+      height: 4px;
+      background: linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="/index.html" class="nav-logo" aria-label="Bodytruth Family Farms Educational Foundation — Home">
+      <img
+        src="https://bodytruthfarms.com/images/foundation-images/BFFEFInclogoVersion2LongTransparent.png"
+        alt="Bodytruth Family Farms Educational Foundation, Inc."
+        height="36"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <span class="nav-logo-fallback" aria-hidden="true">
+        <span class="wm-body">bodytruth</span><span class="wm-farms">farms</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+        <li><a href="/index.html#join">Partner With Us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="/index.html#join" class="btn btn-green">Join the Work</a>
+    </div>
+    <button
+      class="hamburger" aria-label="Open menu"
+      aria-expanded="false" aria-controls="mobile-menu"
+      onclick="toggleMenu(this)"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul role="list">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/our-story.html">Our Story</a></li>
+    <li><a href="/earth-keepers.html">Earth Keepers</a></li>
+    <li><a href="/index.html#join">Partner With Us</a></li>
+  </ul>
+  <a href="/index.html#join" class="btn btn-green" style="width:100%; justify-content:center; margin-top:0.5rem;">Join the Work</a>
+</nav>
+
+<main class="page-body">
+
+  <div class="policy-hero">
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+      <p>Plain English. No surprises. This is how we handle your information.</p>
+    </div>
+  </div>
+
+  <div class="policy-body">
+    <div class="wrap">
+      <div class="policy-inner">
+
+        <p class="policy-intro">
+          Bodytruth Family Farms Educational Foundation, Inc. is built on trust. The people who come to us — aspiring growers, veterans, community builders, funders, Earth Keepers — share their information with us because they believe in what we're building. We take that seriously. This policy explains exactly what we collect, what we do with it, and what we will never do.
+        </p>
+
+        <div class="policy-promise">
+          <p>
+            <strong>Our core promise:</strong> We will never sell, trade, rent, or share your personal information with any third party for any commercial purpose. Ever. Your data exists in our systems to serve your relationship with the Foundation — nothing else.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h2>What We Collect</h2>
+          <p>When you fill out our contact or enrollment forms, we collect only what you provide:</p>
+          <ul>
+            <li>Your name and email address</li>
+            <li>Your organization, if you share it</li>
+            <li>Your role and area of interest (from the form dropdowns)</li>
+            <li>Anything you write in the message field</li>
+          </ul>
+          <p>We do not collect payment information, social security numbers, or any sensitive personal data through this website.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>How We Use It</h2>
+          <p>We use the information you provide for one purpose: to follow up on your inquiry and keep you informed about the Foundation's work — programs, cohort openings, Earth Keeper opportunities, and organizational updates.</p>
+          <p>We do not use your information to build advertising profiles, retarget you across the web, or populate third-party marketing platforms.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Media, Photography & Video</h2>
+          <p>The Foundation documents its work — through photography, video, and storytelling — as part of its mission. This documentation is used to share the impact of our programs with the broader community, funders, and the public.</p>
+          <p>If you participate in a Foundation program, cohort, or Earth Keepers session, you may be photographed or filmed as part of that documentation. Your enrollment form will include a clear opt-out option — no explanation required, no questions asked. If you choose to opt out, that preference is noted and honored at every session.</p>
+          <p>If you are a visitor or community member at a Foundation event, photography may occur in shared spaces. We will always make opt-out signage available at public events.</p>
+          <p>Documentation involving minors requires explicit written consent from a parent or guardian. No exceptions.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Cookies & Analytics</h2>
+          <p>This website may use basic analytics tools (such as Google Analytics) to understand how visitors use the site — which pages are visited, how long people stay, and where they come from. This data is aggregated and anonymous. It helps us improve the site. It does not identify you personally.</p>
+          <p>We do not use tracking cookies for advertising or retargeting purposes.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Data Storage & Security</h2>
+          <p>Your information is stored securely. We use reputable third-party tools to manage form submissions and communications, and we choose tools that take data security seriously. We do not store payment information on our servers.</p>
+          <p>No system is perfectly secure, but we take reasonable precautions to protect your data from unauthorized access, disclosure, or loss.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Your Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Ask what information we hold about you</li>
+            <li>Request that we correct inaccurate information</li>
+            <li>Request that we delete your information</li>
+            <li>Opt out of communications at any time — every email we send includes an unsubscribe option</li>
+            <li>Opt out of photography and video documentation at any point during your engagement with the Foundation</li>
+          </ul>
+          <p>To exercise any of these rights, contact us directly at <a href="mailto:bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com">bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com</a>. We will respond promptly.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Third Parties</h2>
+          <p>We do not sell, trade, or share your personal information with third parties for commercial purposes. Period.</p>
+          <p>We may use trusted service providers (form tools, email platforms, analytics) who process data on our behalf under strict confidentiality. These providers are not permitted to use your data for their own purposes.</p>
+          <p>We may disclose information if required by law — but only to the extent legally required and never voluntarily.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Children's Privacy</h2>
+          <p>This website is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has submitted information through this site, please contact us and we will delete it promptly.</p>
+          <p>For Foundation programs that involve minors, separate written parental consent is required for enrollment and for any photography or video documentation.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>Changes to This Policy</h2>
+          <p>If we update this policy, we will post the revised version here with an updated date. We will not make changes that reduce your rights without clear notice.</p>
+        </div>
+
+        <div class="policy-contact">
+          <strong>Questions?</strong> We're a real organization run by real people. If you have any questions about this policy or how we handle your information, reach out directly:<br><br>
+          <a href="mailto:bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com">bodytruthfoundation<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#64;gmail<a href="mailto:bodytruthfoundation@gmail.com">bodytruthfoundation@gmail.com</a>#46;com</a><br>
+          Bodytruth Family Farms Educational Foundation, Inc.<br>
+          Southeast Michigan
+        </div>
+
+        <p class="policy-updated">Last updated: June 2026</p>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-stripe" aria-hidden="true"></div>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const menu = document.getElementById('mobile-menu');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    menu.setAttribute('aria-hidden', expanded);
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.hamburger');
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    });
+  });
+</script>
+
+</body>
+</html>
