@@ -56,14 +56,6 @@ Produces: Operational experience, refined projections, enterprise validation, pr
 - **Land required:** No
 - **Available:** Now
 
-### FundReady Veteran Entrepreneurship Bootcamp
-- **Format:** 8-week cohort · 40 hours total · 5 hours per week
-- **Audience:** U.S. Military Veterans
-- **Outcome:** Capital Plan · Fundable Asset · Enterprise Ready to Launch
-- **Land required:** No
-- **Available:** Now
-- **Note:** Eligible for VA VR&E funding support
-
 ### FundReady Grant Readiness Bootcamp
 - **Format:** 8-week cohort · 40 hours total · 5 hours per week
 - **Audience:** Nonprofits, mission-driven organizations, community leaders
