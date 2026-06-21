@@ -1367,6 +1367,18 @@
     /* ============================================================
        SR-ONLY
        ============================================================ */
+    /* Cohort detail grid — stack on mobile, 3 cols on desktop */
+    .cohort-detail {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1.5rem 1.75rem;
+      background: var(--white);
+    }
+    @media (min-width: 560px) {
+      .cohort-detail { grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
+    }
+
     .sr-only {
       position: absolute; width: 1px; height: 1px;
       padding: 0; margin: -1px; overflow: hidden;
@@ -1702,7 +1714,7 @@
             </div>
             <span style="background:var(--bright-green); color:var(--white); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 0.85rem; border-radius:100px;">Enrolling Now</span>
           </div>
-          <div style="padding:1.5rem 1.75rem; display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.25rem; background:var(--white);">
+          <div style="padding:1.5rem 1.75rem; background:var(--white);">
             <div>
               <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin:0 0 0.25rem;">Schedule</p>
               <p style="font-size:0.9rem; color:var(--text-body); margin:0;">Mon and Wed, 10:00 to 12:30 PM ET</p>
@@ -1726,7 +1738,7 @@
             </div>
             <span style="background:rgba(255,255,255,0.15); color:var(--white); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 0.85rem; border-radius:100px; border:1px solid rgba(255,255,255,0.3);">Coming Soon</span>
           </div>
-          <div style="padding:1.5rem 1.75rem; display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.25rem; background:var(--white);">
+          <div style="padding:1.5rem 1.75rem; background:var(--white);">
             <div>
               <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin:0 0 0.25rem;">Schedule</p>
               <p style="font-size:0.9rem; color:var(--text-body); margin:0;">Tue and Thu, 6:00 to 8:30 PM ET</p>
@@ -1750,7 +1762,7 @@
             </div>
             <span style="background:rgba(255,255,255,0.15); color:var(--white); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 0.85rem; border-radius:100px; border:1px solid rgba(255,255,255,0.3);">Coming Soon</span>
           </div>
-          <div style="padding:1.5rem 1.75rem; display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.25rem; background:var(--white);">
+          <div style="padding:1.5rem 1.75rem; background:var(--white);">
             <div>
               <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin:0 0 0.25rem;">Schedule</p>
               <p style="font-size:0.9rem; color:var(--text-body); margin:0;">Mon and Wed, 10:00 to 12:30 PM ET</p>
