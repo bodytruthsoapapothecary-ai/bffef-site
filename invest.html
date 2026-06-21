@@ -312,37 +312,47 @@
        BUDGET — Expense to Outcome
        ============================================================ */
     .budget-section { background: var(--white); }
-    .budget-table {
-      width: 100%; max-width: 860px; border-collapse: collapse;
-      margin-top: 2.5rem;
+    /* BUDGET */
+    .budget-phase {
+      margin-top: 2.5rem; max-width: 860px;
     }
-    .budget-table th {
+    .budget-phase-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; padding: 0.75rem 1.25rem;
-      background: var(--forest); color: rgba(255,255,255,0.7);
-      text-align: left;
+      text-transform: uppercase; color: var(--white);
+      background: var(--forest); padding: 0.75rem 1.25rem;
+      border-radius: var(--radius) var(--radius) 0 0;
     }
-    .budget-table th:last-child { text-align: right; }
-    .budget-table td {
-      padding: 1.1rem 1.25rem; font-size: 0.93rem;
-      border-bottom: 1px solid var(--rule); color: var(--text-body);
-      vertical-align: top;
+    .budget-item {
+      padding: 1.25rem; border: 1px solid var(--rule);
+      border-top: none; background: var(--white);
     }
-    .budget-table td:last-child { text-align: right; font-weight: 600; color: var(--near-black); white-space: nowrap; }
-    .budget-table tr:nth-child(even) td { background: var(--warm-white); }
-    .budget-table .outcome-col { font-size: 0.85rem; color: var(--text-muted); }
-    .budget-total td {
-      font-weight: 700; background: var(--deep-green) !important;
-      color: var(--white); border-bottom: none;
+    .budget-item:nth-child(even) { background: var(--warm-white); }
+    .budget-item-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 1rem; flex-wrap: wrap;
+      margin-bottom: 0.4rem;
     }
-    .budget-total td:last-child { color: var(--white); }
-
-    .phase-label {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--bright-green);
-      padding: 0.6rem 1.25rem; background: rgba(45,106,31,0.06);
-      border-bottom: 1px solid var(--rule);
+    .budget-item-name {
+      font-size: 0.93rem; font-weight: 600;
+      color: var(--near-black); flex: 1; min-width: 200px;
     }
+    .budget-item-name small { display: block; font-weight: 400; color: var(--text-muted); font-size: 0.82rem; margin-top: 0.2rem; }
+    .budget-item-amount {
+      font-size: 0.93rem; font-weight: 700;
+      color: var(--near-black); white-space: nowrap;
+    }
+    .budget-item-outcome {
+      font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
+    }
+    .budget-total-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 1.25rem;
+      background: var(--deep-green);
+      border-radius: 0 0 var(--radius) var(--radius);
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    .budget-total-row span { font-size: 0.95rem; font-weight: 700; color: var(--white); }
+    .budget-total-row strong { font-size: 1.1rem; color: var(--white); }
 
     /* ============================================================
        THE ASK
@@ -454,8 +464,8 @@
        ============================================================ -->
   <section class="hero-opening" aria-label="Opening vision">
     <img
-      src="https://bodytruthfamilyfarms.org/images/BFFEF-Community-Learning-Center.jpg"
-      alt="The Artie Short Community Learning Center — the vision for what this Foundation is building"
+      src="https://bodytruthfamilyfarms.org/images/BFFEF-Invest-Hero.jpg"
+      alt="Bodytruth Family Farms Educational Foundation — An Invitation to Invest"
       class="hero-opening-bg"
       onerror="this.style.display='none';"
     >
@@ -464,10 +474,10 @@
       <div class="wrap">
         <div class="invitation-tag">An Invitation to Invest</div>
         <h1>
-          You are not being asked<br>
-          to fund a program.<br>
-          You are being asked to fund<br>
-          <em>a future.</em>
+          We invite you to <em>partner with us</em><br>
+          by investing in the kind of<br>
+          economic mobility that creates<br>
+          <em>flourishing communities.</em>
         </h1>
         <p class="lora-italic">
           What you see here has been seventeen years in the making — from a Detroit backyard garden in 2009 to a formally incorporated nonprofit in 2026. The vision has not changed. The time has come.
@@ -741,89 +751,109 @@
         Expense to outcome. This is where the money goes and what it produces.
       </p>
 
-      <table class="budget-table">
-        <thead>
-          <tr>
-            <th>Line Item</th>
-            <th>Outcome</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td colspan="3" class="phase-label">Phase 1 — Year One Operations · Request: $75,000</td></tr>
-          <tr>
-            <td>Cohort delivery — 3 cohorts × 12 participants at market rate $1,500/participant<br><small style="color:var(--text-muted);">Includes facilitator compensation</small></td>
-            <td class="outcome-col">36 participants · 36 Capital Plans · 22+ enterprises launched</td>
-            <td>$54,000</td>
-          </tr>
-          <tr>
-            <td>Technology infrastructure<br><small style="color:var(--text-muted);">Zoom Pro · Claude · Calendly · Loom · Airtable</small></td>
-            <td class="outcome-col">Seamless online delivery · program evaluation · participant tracking</td>
-            <td>$1,390</td>
-          </tr>
-          <tr>
-            <td>Administrative support — part-time coordinator</td>
-            <td class="outcome-col">Enrollment, communications, cohort coordination, funder reporting</td>
-            <td>$15,000</td>
-          </tr>
-          <tr>
-            <td>Contingency / operational flex</td>
-            <td class="outcome-col">Responsive to first-cohort learnings</td>
-            <td>$4,610</td>
-          </tr>
-          <tr class="budget-total">
-            <td colspan="2"><strong>Phase 1 Total — Year One Operations</strong></td>
-            <td><strong>$75,000</strong></td>
-          </tr>
+      <!-- PHASE 1 -->
+      <div class="budget-phase">
+        <div class="budget-phase-label">Phase 1 — Year One Operations · $75,000</div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Cohort delivery — 3 cohorts × 12 participants at market rate $1,500/participant<small>Includes facilitator compensation</small></div>
+            <div class="budget-item-amount">$54,000</div>
+          </div>
+          <div class="budget-item-outcome">36 participants · 36 Capital Plans · 22+ enterprises launched</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Technology infrastructure<small>Zoom Pro · Claude · Calendly · Loom · Airtable</small></div>
+            <div class="budget-item-amount">$1,390</div>
+          </div>
+          <div class="budget-item-outcome">Seamless online delivery · program evaluation · participant tracking</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Administrative support — part-time coordinator</div>
+            <div class="budget-item-amount">$15,000</div>
+          </div>
+          <div class="budget-item-outcome">Enrollment, communications, cohort coordination, funder reporting</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Contingency / operational flex</div>
+            <div class="budget-item-amount">$4,610</div>
+          </div>
+          <div class="budget-item-outcome">Responsive to first-cohort learnings</div>
+        </div>
+        <div class="budget-total-row">
+          <span>Phase 1 Total — Year One Operations</span>
+          <strong>$75,000</strong>
+        </div>
+      </div>
 
-          <tr><td colspan="3" class="phase-label" style="padding-top:1.5rem;">Phase 2 — Capacity Building · Request: $25,000</td></tr>
-          <tr>
-            <td>501(c)(3) application, legal, filing</td>
-            <td class="outcome-col">Tax-exempt status · donor deductibility · full grant eligibility</td>
-            <td>$5,000</td>
-          </tr>
-          <tr>
-            <td>Board development · governance infrastructure</td>
-            <td class="outcome-col">Institutional credibility · fiduciary oversight · funder confidence</td>
-            <td>$5,000</td>
-          </tr>
-          <tr>
-            <td>Financial systems · audit-ready bookkeeping · insurance</td>
-            <td class="outcome-col">D&O coverage · clean financials · funder site visit readiness</td>
-            <td>$10,000</td>
-          </tr>
-          <tr>
-            <td>HR infrastructure · participant agreements · policies</td>
-            <td class="outcome-col">Legal compliance · participant protection · scalable enrollment</td>
-            <td>$5,000</td>
-          </tr>
-          <tr class="budget-total">
-            <td colspan="2"><strong>Phase 2 Total — Capacity Building</strong></td>
-            <td><strong>$25,000</strong></td>
-          </tr>
+      <!-- PHASE 2 -->
+      <div class="budget-phase">
+        <div class="budget-phase-label">Phase 2 — Capacity Building · $25,000</div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">501(c)(3) application, legal, filing</div>
+            <div class="budget-item-amount">$5,000</div>
+          </div>
+          <div class="budget-item-outcome">Tax-exempt status · donor deductibility · full grant eligibility</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Board development · governance infrastructure</div>
+            <div class="budget-item-amount">$5,000</div>
+          </div>
+          <div class="budget-item-outcome">Institutional credibility · fiduciary oversight · funder confidence</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Financial systems · audit-ready bookkeeping · insurance</div>
+            <div class="budget-item-amount">$10,000</div>
+          </div>
+          <div class="budget-item-outcome">D&O coverage · clean financials · funder site visit readiness</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">HR infrastructure · participant agreements · policies</div>
+            <div class="budget-item-amount">$5,000</div>
+          </div>
+          <div class="budget-item-outcome">Legal compliance · participant protection · scalable enrollment</div>
+        </div>
+        <div class="budget-total-row">
+          <span>Phase 2 Total — Capacity Building</span>
+          <strong>$25,000</strong>
+        </div>
+      </div>
 
-          <tr><td colspan="3" class="phase-label" style="padding-top:1.5rem;">Phase 3 — Land & Facility · Capital Campaign: $1,025,000–$1,375,000</td></tr>
-          <tr>
-            <td>Land acquisition — 10+ acres Southeast Michigan<br><small style="color:var(--text-muted);">Open to donation, below-market sale, or land trust arrangement</small></td>
-            <td class="outcome-col">Land Enterprise Collaborative · farm incubator · campus foundation</td>
-            <td>$100K–$700K</td>
-          </tr>
-          <tr>
-            <td>Artie Short Community Learning Center — construction or fit-out</td>
-            <td class="outcome-col">Classroom · media lab · tech lab · event pavilion · 12-laptop library</td>
-            <td>$625K–$175K</td>
-          </tr>
-          <tr>
-            <td>Bodytruth Kitchen Incubator — 6 commercial bays</td>
-            <td class="outcome-col">Graduate incubator leases · ServSafe hub · workshop infrastructure</td>
-            <td>$300K–$500K</td>
-          </tr>
-          <tr class="budget-total">
-            <td colspan="2"><strong>Phase 3 Total — Land & Facility</strong></td>
-            <td><strong>$1.025M–$1.375M</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- PHASE 3 -->
+      <div class="budget-phase">
+        <div class="budget-phase-label">Phase 3 — Land & Facility · Capital Campaign: $1.025M–$1.375M</div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Land acquisition — 10+ acres, Southeast Michigan<small>Open to donation, below-market sale, or land trust arrangement</small></div>
+            <div class="budget-item-amount">$100K–$700K</div>
+          </div>
+          <div class="budget-item-outcome">Land Enterprise Collaborative · farm incubator · campus foundation</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">The Artie Short Community Learning Center — construction or fit-out</div>
+            <div class="budget-item-amount">$175K–$625K</div>
+          </div>
+          <div class="budget-item-outcome">Classroom · media lab · tech lab · event pavilion · 12-laptop library</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Bodytruth Kitchen Incubator — 6 commercial bays</div>
+            <div class="budget-item-amount">$300K–$500K</div>
+          </div>
+          <div class="budget-item-outcome">Graduate incubator leases · ServSafe hub · workshop infrastructure</div>
+        </div>
+        <div class="budget-total-row">
+          <span>Phase 3 Total — Land & Facility</span>
+          <strong>$1.025M–$1.375M</strong>
+        </div>
+      </div>
     </div>
   </section>
 
