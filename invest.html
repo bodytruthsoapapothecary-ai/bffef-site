@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta property="og:image" content="https://bodytruthfamilyfarms.org/images/hero-stephanie-willis.jpg">
+  <meta property="og:image" content="https://bodytruthfamilyfarms.org/images/BFFEF-Site-Concept.jpg">
   <meta property="og:image:width" content="1456">
   <meta property="og:image:height" content="816">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bodytruthfamilyfarms.org/images/hero-stephanie-willis.jpg">
+  <meta name="twitter:image" content="https://bodytruthfamilyfarms.org/images/BFFEF-Site-Concept.jpg">
   <meta name="description" content="An invitation to invest in Bodytruth Family Farms Educational Foundation — the vision, the ecosystem, the impact, and the ask.">
 
   <title>An Invitation — Bodytruth Family Farms Educational Foundation</title>
@@ -56,9 +56,9 @@
     h2 { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(1.9rem, 4vw, 2.9rem); }
     h3 { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; font-size: clamp(1.1rem, 2vw, 1.5rem); }
 
-    .lora { font-family: 'Lora', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
+    .lora        { font-family: 'Lora', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
     .lora-italic { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
-    .lora-large { font-family: 'Lora', Georgia, serif; font-size: clamp(1.2rem, 2.5vw, 1.5rem); line-height: 1.8; }
+    .lora-large  { font-family: 'Lora', Georgia, serif; font-size: clamp(1.2rem, 2.5vw, 1.5rem); line-height: 1.8; }
 
     .eyebrow {
       display: inline-block; font-size: 0.75rem; font-weight: 700;
@@ -99,7 +99,7 @@
     .pull-quote--dark p { color: rgba(255,255,255,0.88); }
 
     /* ============================================================
-       OPENING HERO — The Community Center. Full viewport. Feel it first.
+       OPENING HERO
        ============================================================ */
     .hero-opening {
       position: relative;
@@ -145,7 +145,6 @@
       max-width: 660px; margin-bottom: 0;
     }
 
-    /* Building name + dedication */
     .building-dedication {
       margin-top: 3rem;
       padding-top: 2rem;
@@ -164,7 +163,7 @@
     }
 
     /* ============================================================
-       ORIGIN — Artie. The root.
+       ORIGIN
        ============================================================ */
     .origin { background: var(--white); }
     .origin-grid {
@@ -221,42 +220,66 @@
     .connection-note strong { color: var(--bright-green); font-style: normal; }
 
     /* ============================================================
-       THE VISION — Kitchen + Community Center
+       THE CAMPUS — single full-width image + specs
        ============================================================ */
-    .vision-section { background: var(--forest); }
-    .vision-section h2 { color: var(--white); margin-bottom: 1.25rem; }
-    .vision-section .lora { color: rgba(255,255,255,0.82); margin-bottom: 1.25rem; }
+    .campus-section { background: var(--forest); }
+    .campus-section h2 { color: var(--white); margin-bottom: 1.25rem; }
+    .campus-section .lora { color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; }
 
-    .vision-grid {
+    .campus-hero-img {
+      width: 100%; border-radius: var(--radius-lg); overflow: hidden;
+      margin: 2.5rem 0;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+    .campus-hero-img img {
+      width: 100%; height: auto; display: block;
+    }
+
+    .campus-stats {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    @media (min-width: 640px) { .campus-stats { grid-template-columns: repeat(4, 1fr); } }
+
+    .campus-stat {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg); padding: 1.5rem 1.25rem; text-align: center;
+    }
+    .campus-stat-num {
+      font-family: 'Inter', sans-serif; font-weight: 800;
+      font-size: clamp(1.5rem, 3vw, 2rem); color: var(--bright-green);
+      letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.4rem;
+    }
+    .campus-stat-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.55); line-height: 1.4; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .campus-structures {
       display: grid; grid-template-columns: 1fr;
-      gap: 1.5rem; margin-top: 3rem;
+      gap: 1rem; margin-top: 2rem;
     }
-    @media (min-width: 768px) { .vision-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 640px) { .campus-structures { grid-template-columns: 1fr 1fr 1fr; } }
+    .structure-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius); padding: 1.5rem;
+      border-top: 3px solid var(--bright-green);
+    }
+    .structure-card--amber { border-top-color: var(--amber); }
+    .structure-card--teal  { border-top-color: var(--teal); }
+    .structure-name { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bright-green); margin-bottom: 0.4rem; }
+    .structure-name--amber { color: var(--amber); }
+    .structure-name--teal  { color: var(--teal); }
+    .structure-card h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; letter-spacing: 0; }
+    .structure-card p { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin: 0; }
 
-    .vision-card {
-      border-radius: var(--radius-lg); overflow: hidden;
-      position: relative; background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
+    .campus-value-note {
+      margin-top: 2.5rem; padding: 1.75rem 2rem;
+      background: rgba(232,160,32,0.12); border: 1px solid rgba(232,160,32,0.25);
+      border-radius: var(--radius-lg);
     }
-    .vision-card-img {
-      width: 100%; aspect-ratio: 16/10;
-      object-fit: cover; object-position: center;
-      display: block;
-    }
-    .vision-card-body { padding: 1.75rem; }
-    .vision-card-body h3 { color: var(--white); margin-bottom: 0.75rem; font-size: 1.1rem; }
-    .vision-card-body p { font-size: 0.93rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin: 0; }
-    .vision-card-features {
-      margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;
-    }
-    .vision-feature {
-      font-size: 0.78rem; font-weight: 600; padding: 0.3rem 0.75rem;
-      border-radius: 100px; background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.65);
-    }
+    .campus-value-note p { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.88); line-height: 1.85; margin: 0; }
+    .campus-value-note strong { color: var(--amber); font-style: normal; }
 
     /* ============================================================
-       THE PEOPLE — Stephanie + family images
+       THE PEOPLE
        ============================================================ */
     .people-section { background: var(--amber-light); }
     .people-grid {
@@ -276,18 +299,24 @@
     .impact-section { background: var(--white); }
     .impact-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1.25rem; margin-top: 3rem; max-width: 860px;
+      gap: 1.25rem; margin-top: 3rem; max-width: 960px;
     }
     @media (min-width: 640px) { .impact-grid { grid-template-columns: repeat(3, 1fr); } }
     .impact-card {
       background: var(--warm-white); border-radius: var(--radius-lg);
       padding: 1.75rem 1.5rem; border: 1.5px solid var(--rule); text-align: center;
     }
+    .impact-card--highlight {
+      background: var(--forest); border-color: var(--forest);
+    }
+    .impact-card--highlight .impact-num { color: var(--bright-green); }
+    .impact-card--highlight .impact-label { color: rgba(255,255,255,0.65); }
+
     .impact-num { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 2.5rem; color: var(--deep-green); line-height: 1; margin-bottom: 0.4rem; }
     .impact-label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); line-height: 1.4; }
 
     .impact-statement {
-      margin-top: 3rem; max-width: 860px;
+      margin-top: 3rem; max-width: 960px;
       padding: 2.5rem; background: var(--forest); border-radius: var(--radius-lg);
     }
     .impact-statement p { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1.05rem, 2vw, 1.2rem); color: rgba(255,255,255,0.88); line-height: 1.85; margin: 0; }
@@ -314,13 +343,44 @@
     }
 
     /* ============================================================
-       BUDGET — Expense to Outcome
+       REVENUE MODEL
        ============================================================ */
-    .budget-section { background: var(--white); }
-    /* BUDGET */
-    .budget-phase {
-      margin-top: 2.5rem; max-width: 860px;
+    .revenue-section { background: var(--white); }
+    .revenue-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 1rem; margin-top: 2.5rem; max-width: 860px;
     }
+    @media (min-width: 640px) { .revenue-grid { grid-template-columns: 1fr 1fr; } }
+    .revenue-card {
+      background: var(--warm-white); border-radius: var(--radius);
+      padding: 1.5rem; border: 1.5px solid var(--rule);
+    }
+    .revenue-card-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--bright-green); margin-bottom: 0.4rem;
+    }
+    .revenue-card h3 { font-size: 0.95rem; color: var(--near-black); margin-bottom: 0.3rem; letter-spacing: 0; }
+    .revenue-card-amount { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--deep-green); }
+    .revenue-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; margin-top: 0.4rem; margin-bottom: 0; }
+
+    .revenue-total-block {
+      margin-top: 2rem; max-width: 860px;
+      padding: 2rem; background: var(--deep-green); border-radius: var(--radius-lg);
+      display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;
+    }
+    .revenue-total-num {
+      font-family: 'Inter', sans-serif; font-weight: 800;
+      font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--white);
+      letter-spacing: -0.02em; line-height: 1;
+    }
+    .revenue-total-label { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.35rem; }
+    .revenue-total-note { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.7; max-width: 440px; }
+
+    /* ============================================================
+       BUDGET
+       ============================================================ */
+    .budget-section { background: var(--warm-white); }
+    .budget-phase { margin-top: 2.5rem; max-width: 860px; }
     .budget-phase-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--white);
@@ -372,7 +432,7 @@
     }
     .ask-total-num {
       font-family: 'Inter', sans-serif; font-weight: 800;
-      font-size: clamp(3rem, 8vw, 5rem);
+      font-size: clamp(3.5rem, 9vw, 6rem);
       color: var(--white); letter-spacing: -0.03em;
       line-height: 1; margin-bottom: 0.5rem;
     }
@@ -383,30 +443,51 @@
 
     .ask-grid {
       display: grid; grid-template-columns: 1fr;
-      gap: 1rem; max-width: 760px; margin: 2.5rem 0;
+      gap: 1rem; max-width: 860px; margin: 2.5rem 0;
     }
-    @media (min-width: 640px) { .ask-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 640px) { .ask-grid { grid-template-columns: 1fr 1fr 1fr; } }
     .ask-card {
       background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
       border-radius: var(--radius-lg); padding: 1.75rem;
     }
+    .ask-card--highlight {
+      background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.3);
+    }
     .ask-card-amount {
       font-family: 'Inter', sans-serif; font-weight: 800;
-      font-size: 1.75rem; color: var(--amber); letter-spacing: -0.02em;
-      margin-bottom: 0.4rem;
+      font-size: 1.6rem; color: var(--amber); letter-spacing: -0.02em;
+      margin-bottom: 0.4rem; line-height: 1.1;
     }
-    .ask-card h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; letter-spacing: 0; }
-    .ask-card p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; }
+    .ask-card h3 { font-size: 0.93rem; color: var(--white); margin-bottom: 0.5rem; letter-spacing: 0; }
+    .ask-card p { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; }
+
+    .funding-stack {
+      margin-top: 2.5rem; max-width: 860px;
+    }
+    .funding-stack-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 1rem;
+    }
+    .funding-stack-item {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1rem; padding: 0.9rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
+    }
+    .funding-stack-item:last-child { border-bottom: none; }
+    .funding-stack-source { font-size: 0.88rem; font-weight: 600; color: var(--white); flex: 1; min-width: 160px; }
+    .funding-stack-type  { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-weight: 500; margin-top: 0.1rem; }
+    .funding-stack-amount { font-size: 0.88rem; font-weight: 700; color: var(--amber); white-space: nowrap; }
 
     .ask-model-note {
       margin-top: 2.5rem; padding: 1.75rem 2rem;
       background: rgba(255,255,255,0.06); border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,0.12); max-width: 760px;
+      border: 1px solid rgba(255,255,255,0.12); max-width: 860px;
     }
     .ask-model-note p { font-size: 0.9rem; color: rgba(255,255,255,0.72); line-height: 1.8; margin: 0; }
 
     /* ============================================================
-       THE INVITATION — closing CTA
+       CLOSING
        ============================================================ */
     .closing-section { background: var(--forest); }
     .closing-inner { max-width: 760px; }
@@ -432,24 +513,15 @@
       margin-top: 3rem; display: flex; gap: 2rem; align-items: center;
       flex-wrap: wrap;
     }
-    .founder-closing-img {
-      width: 110px; height: 110px;
-      flex-shrink: 0;
-    }
+    .founder-closing-img { width: 110px; height: 110px; flex-shrink: 0; }
     .founder-closing-img img { width: 100%; height: 100%; object-fit: contain; }
     .founder-closing-text p { font-size: 0.93rem; color: rgba(255,255,255,0.65); margin-bottom: 0.25rem; }
     .founder-closing-text strong { color: var(--white); font-size: 1rem; }
 
     .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
 
-    /* FOOTER STRIPE */
     .footer-stripe { height: 6px; background: linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%); }
-
-    /* CONFIDENTIAL WATERMARK */
-    .confidential-bar {
-      background: var(--near-black); padding: 0.75rem;
-      text-align: center;
-    }
+    .confidential-bar { background: var(--near-black); padding: 0.75rem; text-align: center; }
     .confidential-bar p {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em;
       text-transform: uppercase; color: rgba(255,255,255,0.35); margin: 0;
@@ -459,13 +531,12 @@
 
 <body>
 
-  <!-- CONFIDENTIAL BAR -->
   <div class="confidential-bar">
     <p>Confidential · By Invitation Only · Bodytruth Family Farms Educational Foundation, Inc. · 2026</p>
   </div>
 
   <!-- ============================================================
-       HERO — The Community Center. Feel it first.
+       HERO
        ============================================================ -->
   <section class="hero-opening" aria-label="Opening vision">
     <img
@@ -485,24 +556,22 @@
           <em>flourishing communities.</em>
         </h1>
         <p class="lora-italic">
-          What you see here has been seventeen years in the making — from a Detroit backyard garden in 2009 to a formally incorporated nonprofit in 2026. The vision has not changed. The time has come.
+          305 W Elizabeth St, Stockbridge, MI — a 70,500 SF former school on 4.6 acres, acquired for $319,000 and converted into a self-sustaining community campus.
         </p>
-
         <div class="building-dedication">
-          <p class="building-name">Bodytruth Family Farms Educational Foundation</p>
-          <p class="building-dedication-name">The Artie Short Community Learning Center</p>
+          <div class="building-name">The Artie Short Community Learning Center</div>
+          <div class="building-dedication-name">Named for the man who showed us what it means to grow something, tend it, and give it away.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       THE ORIGIN — Artie Short
+       ORIGIN
        ============================================================ -->
   <section class="section origin" aria-label="The origin — Artie Short">
     <div class="wrap">
       <div class="origin-grid">
-
         <div class="origin-img">
           <img
             src="https://bodytruthfarms.com/images/foundation-images/BFFEF-Artie.jpg"
@@ -513,7 +582,6 @@
             <p><strong>Artie Short</strong><br>Vietnam Veteran · Gardener · The Beginning</p>
           </div>
         </div>
-
         <div>
           <span class="eyebrow">The Root</span>
           <h2>It started with a man who found peace in a garden.</h2>
@@ -530,7 +598,6 @@
             The building that carries Artie's name is not a monument. It is a living classroom — designed to do for entire communities what Artie's garden did for one family. Grow things. Teach people. Feed the future.
           </p>
         </div>
-
       </div>
     </div>
   </section>
@@ -555,76 +622,83 @@
         <div class="entity-card entity-card--amber">
           <p class="entity-tag entity-tag--amber">Bodytruth Family Farms Educational Foundation · 501(c)(3) Pending</p>
           <h3>The Delivery Vehicle</h3>
-          <p>The nonprofit. The programs. The bootcamps. The Earth Keepers mentorship network. The community building. The land. The place where the methodology meets the people it was built for.</p>
+          <p>The nonprofit. The programs. The bootcamps. The Earth Keepers mentorship network. The community building. The campus landlord. The place where the methodology meets the people it was built for.</p>
         </div>
         <div class="entity-card entity-card--teal">
           <p class="entity-tag entity-tag--teal">Bodytruth Family Farms Ventures LLC · For-Profit</p>
           <h3>The Earned Revenue Arm</h3>
-          <p>The farm. The soap apothecary. The production enterprise. Leases operational space from the Foundation — generating earned income that supports Foundation operations without dependence on any single funder.</p>
+          <p>The farm. The soap apothecary. The production enterprise. Leases growing beds and lab space from the Foundation — a tenant like all others. Generates earned income while keeping clean operational separation from the nonprofit.</p>
         </div>
       </div>
 
       <div class="connection-note">
         <p>
-          <strong>The self-sustainability model:</strong> The Foundation owns the land and the building. Bodytruth Ventures leases space from the Foundation. That lease revenue supports Foundation operations. The methodology company licenses curriculum to the Foundation. All three entities strengthen each other — and none of them depend on grant funding alone to survive.
+          <strong>The self-sustainability model:</strong> The Foundation owns the building and the land. Twelve or more tenants — wellness businesses, wrap-around agencies, co-working members, and Bodytruth Ventures — pay leases to the Foundation. That revenue funds the mission without waiting on any grant cycle. The building pays for itself. The programs are the return.
         </p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       THE VISION — Kitchen + Community Center images
+       THE CAMPUS — single image + structures
        ============================================================ -->
-  <section class="section vision-section" aria-label="The physical vision">
+  <section class="section campus-section" aria-label="The campus">
     <div class="wrap">
       <span class="eyebrow eyebrow--white">The Physical Vision</span>
-      <h2>What We Are Building.</h2>
+      <h2>305 W Elizabeth St, Stockbridge, MI.</h2>
       <p class="lora">
-        The land model requires a community building. Not a corporate campus. Not an office park. A place where people come to learn how to grow food, build enterprises, and belong to something larger than themselves. These are the two anchor facilities.
+        A former school that closed because a town shrank. We are reopening it because a community is ready to grow. 70,500 square feet across three buildings. 4.6 acres. Acquired at $4.52 per square foot against a replacement cost of $150–$200/SF.
       </p>
 
-      <div class="vision-grid">
+      <div class="campus-hero-img">
+        <img
+          src="https://bodytruthfamilyfarms.org/images/BFFEF-Site-Concept.jpg"
+          alt="Bodytruth Family Farms Educational Foundation — 305 W Elizabeth St, Stockbridge MI campus site concept"
+          onerror="this.style.opacity='0.3';"
+        >
+      </div>
 
-        <div class="vision-card">
-          <img
-            src="https://bodytruthfamilyfarms.org/images/BFFEF-Community-Learning-Center.jpg"
-            alt="Bodytruth Family Farms Learning and Community Center — The Artie Short Community Learning Center"
-            class="vision-card-img"
-            onerror="this.style.display='none';"
-          >
-          <div class="vision-card-body">
-            <h3>The Artie Short Community Learning Center</h3>
-            <p>The heart of the campus. Library and reading rooms, media lab, tech lab, business development lab, career development lab, and a pavilion event space that serves the community and generates rental income for aligned events.</p>
-            <div class="vision-card-features">
-              <span class="vision-feature">Library & Reading Rooms</span>
-              <span class="vision-feature">Media Lab</span>
-              <span class="vision-feature">Tech Lab</span>
-              <span class="vision-feature">Biz Dev Lab</span>
-              <span class="vision-feature">Event Pavilion</span>
-              <span class="vision-feature">12-Laptop Lending Library</span>
-            </div>
-          </div>
+      <div class="campus-stats">
+        <div class="campus-stat">
+          <div class="campus-stat-num">70,500</div>
+          <div class="campus-stat-label">Total Square Feet<br>Across 3 Structures</div>
         </div>
-
-        <div class="vision-card">
-          <img
-            src="https://bodytruthfamilyfarms.org/images/BFFEF-Kitchen-Incubator.jpg"
-            alt="Bodytruth Kitchen Incubator — 6 dual-purpose Train and Grow Bays"
-            class="vision-card-img"
-            onerror="this.style.display='none';"
-          >
-          <div class="vision-card-body">
-            <h3>Bodytruth Kitchen Incubator</h3>
-            <p>Six fully equipped commercial kitchen bays. Each one a training space and a short-term incubator lease for bootcamp graduates. ServSafe® certification hub. </p>
-            <div class="vision-card-features">
-              <span class="vision-feature">6 Commercial Kitchen Bays</span>
-              <span class="vision-feature">ServSafe® Hub</span>
-              <span class="vision-feature">Graduate Incubator Leases</span>
-                            <span class="vision-feature">Separate Cold, Frozen & Dry Storage</span>
-            </div>
-          </div>
+        <div class="campus-stat">
+          <div class="campus-stat-num">4.6</div>
+          <div class="campus-stat-label">Acres — Grounds,<br>Gardens & Training Beds</div>
         </div>
+        <div class="campus-stat">
+          <div class="campus-stat-num">$319K</div>
+          <div class="campus-stat-label">Acquisition Price<br>vs. $10.5M+ Replacement</div>
+        </div>
+        <div class="campus-stat">
+          <div class="campus-stat-num">12+</div>
+          <div class="campus-stat-label">Revenue Streams<br>From Day One</div>
+        </div>
+      </div>
 
+      <div class="campus-structures" style="margin-top:2.5rem;">
+        <div class="structure-card">
+          <p class="structure-name">Structure 1 · 33,000 SF</p>
+          <h3>The Learning Hub</h3>
+          <p>Former high school, 2 stories + full basement. Bootcamp delivery, Foundation offices, co-working, gymnasium, media lab, tech lab, career development lab, library and reading room. Wellness suites on upper floors.</p>
+        </div>
+        <div class="structure-card structure-card--amber">
+          <p class="structure-name structure-name--amber">Structure 2 · 37,500 SF</p>
+          <h3>The Community Center</h3>
+          <p>Former middle school, single story. Community gathering hall, auditorium and event space, conference rooms, commercial kitchen incubator (Phase 2), and community distribution point for harvest and workshop outputs.</p>
+        </div>
+        <div class="structure-card structure-card--teal">
+          <p class="structure-name structure-name--teal">Structure 3 · 5,800 SF</p>
+          <h3>The Farm Systems Workshop</h3>
+          <p>Former machine shop with overhead garage doors, concrete floors, and modern electrical service. Built for exactly what the 40-Hour Farm Systems Training requires. Also leasable to Ventures LLC.</p>
+        </div>
+      </div>
+
+      <div class="campus-value-note">
+        <p>
+          The campus is not the end goal. It is the container. <strong>Every program, every tenant, every community distribution event, every acre tended</strong> — all of it happens here. The school closed because a community didn't have enough to sustain it. We are reopening it because a community is ready to build something that sustains itself.
+        </p>
       </div>
     </div>
   </section>
@@ -641,12 +715,12 @@
           <img
             src="https://bodytruthfarms.com/images/foundation-images/story-family-store.jpg"
             alt="Stephanie Willis with her mother and Artie Short — in the store that started it all"
-            onerror="this.style.display='none';"
+            onerror="this.style.display:'none';"
           >
         </div>
         <div>
           <p class="lora" style="margin-bottom:1.25rem;">
-            Stephanie Willis spent seventeen years building the proof of concept for everything this Foundation formalizes. A community garden in Detroit. A soap apothecary. A teaching program at the Detroit Public Library. A Kansas brick-and-mortar store that became a community gathering place. A citywide food pantry network. A $180,000 COVID-response grant. A son who built something extraordinary from what she taught him — now a PhD candidate in Physics.
+            Stephanie Willis spent seventeen years building the proof of concept for everything this Foundation formalizes. A community garden in Detroit. A soap apothecary. A teaching program at the Detroit Public Library. A Kansas brick-and-mortar store that became a community gathering place. A citywide food pantry network. A $180,000 COVID-response grant.
           </p>
           <p class="lora" style="margin-bottom:1.25rem;">
             She built FundReady LLC — a capital readiness methodology now patent-pending — because she saw that the infrastructure knowledge that makes organizations fundable was locked inside professional networks that most community builders never enter. She built the Foundation because FundReady needed a home that could deliver it to the people who need it most.
@@ -665,42 +739,54 @@
   <section class="section impact-section" aria-label="Impact">
     <div class="wrap">
       <span class="eyebrow">The Impact</span>
-      <h2>This is what we are building. These are the outcomes we built for.</h2>
+      <h2>What Year One looks like at full program delivery.</h2>
 
       <div class="impact-grid">
         <div class="impact-card">
-          <div class="impact-num">36</div>
-          <div class="impact-label">Participants served<br>Year One</div>
+          <div class="impact-num">72–108</div>
+          <div class="impact-label">Bootcamp participants<br>Year One</div>
         </div>
         <div class="impact-card">
-          <div class="impact-num">36</div>
+          <div class="impact-num">61–92</div>
           <div class="impact-label">Capital Plans<br>produced</div>
         </div>
         <div class="impact-card">
-          <div class="impact-num">22+</div>
-          <div class="impact-label">Enterprises<br>launched Year One</div>
+          <div class="impact-num">25–35</div>
+          <div class="impact-label">Enterprises launched —<br>farms, food biz, nonprofits</div>
         </div>
         <div class="impact-card">
           <div class="impact-num">85%</div>
           <div class="impact-label">Target cohort<br>completion rate</div>
         </div>
         <div class="impact-card">
-          <div class="impact-num">3</div>
-          <div class="impact-label">Cohorts — July 2026<br>through March 2027</div>
+          <div class="impact-num">20–30</div>
+          <div class="impact-label">Earth Keepers<br>actively serving</div>
         </div>
         <div class="impact-card">
-          <div class="impact-num">Q4 '26</div>
-          <div class="impact-label">First job creation<br>data reported</div>
+          <div class="impact-num">8–12</div>
+          <div class="impact-label">Direct campus jobs<br>at living wage</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-num">58–152</div>
+          <div class="impact-label">Total jobs created —<br>direct + participant enterprises</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-num">180–300</div>
+          <div class="impact-label">Community members<br>reached via workshops</div>
+        </div>
+        <div class="impact-card impact-card--highlight">
+          <div class="impact-num">300–600+</div>
+          <div class="impact-label">Total lives touched<br>Year One</div>
         </div>
       </div>
 
       <div class="impact-statement">
         <p>
-          The enterprises our graduates build are designed to scale. Our training produces <strong>institutional-grade Capital Plans, documented SOPs, and operational systems built for real growth.</strong> Job creation follows the vision — and we train people to vision big. Every enterprise launched becomes a job creator in its own right. That impact compounds. It does not stop when the cohort ends.
+          The enterprises our graduates build are designed to scale. Our training produces <strong>institutional-grade Capital Plans, documented SOPs, and operational systems built for real growth.</strong> We count the businesses launched. We count the jobs those businesses create. We count the Earth Keepers who gave their knowledge back. We count the community members who walked in the door. <strong>The impact doesn't stop when the cohort ends. It compounds.</strong>
         </p>
       </div>
 
-      <div style="margin-top:2.5rem; max-width:860px;">
+      <div style="margin-top:2.5rem; max-width:960px;">
         <div class="pull-quote">
           <p>Our graduates don't leave with a plan and a handshake. They leave with a Capital Plan and an introduction — to the CDFIs, lenders, and partner organizations already waiting to review what they built.</p>
         </div>
@@ -727,33 +813,100 @@
         </div>
         <div class="program-item">
           <p class="tag">For Nonprofits</p>
-          <h3>FundReady for Nonprofits — Capital Readiness Bootcamp</h3>
+          <h3>FundReady for Nonprofits — Grant Readiness Bootcamp</h3>
           <p>8 weeks · 40 hours · Online · $99 co-pay. Builds corporate-level grant readiness infrastructure into mission-driven organizations — repeatable systems, documented capacity, and a Grant Readiness Package funders can say yes to.</p>
         </div>
         <div class="program-item">
           <p class="tag">For Growers</p>
           <h3>FundReady for Growers — Land Enterprise Bootcamp</h3>
-          <p>8 weeks · 40 hours · Online · $99 co-pay. Business plan and capital strategy bootcamp for urban farmers and intentional communities. Land Enterprise Collaborative — hands-on incubator — launches when land is secured in Southeast Michigan.</p>
+          <p>8 weeks · 40 hours · Online · $99 co-pay. Business plan and capital strategy bootcamp for urban farmers and intentional land stewards. The Land Enterprise Collaborative launches on-site when the campus opens — Stockbridge is the implementation environment.</p>
+        </div>
+        <div class="program-item">
+          <p class="tag">On-Site · Campus Programs</p>
+          <h3>40-Hour Farm Systems Training + LEC Certification</h3>
+          <p>Hands-on training in the Farm Systems Workshop — building structures, equipment operation, growing systems, and outdoor farm practicum. Certifies participants as Land Enterprise Collaborative implementers.</p>
         </div>
       </div>
 
       <div style="margin-top:2.5rem; padding:1.5rem 2rem; background:rgba(45,106,31,0.06); border-radius:var(--radius-lg); border:1.5px solid rgba(45,106,31,0.15); max-width:760px;">
         <p style="font-size:0.9rem; color:var(--text-body); margin:0; line-height:1.8;">
-          <strong>Earth Keepers Volunteer Mentorship Program</strong> — wraps all three bootcamps. Experienced practitioners — master growers, business mentors, grant coaches, workshop facilitators — contribute their knowledge to bootcamp participants. Earth Keepers are recognized permanently on the Foundation's Honor Wall after a full season of service.
+          <strong>Earth Keepers Volunteer Mentorship Program</strong> — wraps all programs. Experienced practitioners — master growers, business mentors, grant coaches, workshop facilitators — contribute their knowledge to bootcamp participants and community members. Earth Keepers are recognized permanently on the Foundation's Honor Wall after a full season of service.
         </p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       THE BUDGET — Expense to Outcome
+       REVENUE MODEL
+       ============================================================ -->
+  <section class="section revenue-section" aria-label="Revenue model">
+    <div class="wrap">
+      <span class="eyebrow">The Revenue Model</span>
+      <h2>The Building Pays for the Mission.</h2>
+      <p style="margin-top:1rem; color:var(--text-muted); max-width:640px;">
+        The Foundation is the landlord. Every occupant — wellness businesses, wrap-around agencies, co-working members, and Bodytruth Ventures — pays rent. That revenue funds operations before a single grant is awarded.
+      </p>
+
+      <div class="revenue-grid">
+        <div class="revenue-card">
+          <p class="revenue-card-label">Tier 1 — Wellness Suites</p>
+          <h3>8–12 Solo Practitioners & Wellness Businesses</h3>
+          <div class="revenue-card-amount">$600–$800/mo per suite</div>
+          <p>Massage therapists, estheticians, herbalists, nutritionists, mental health counselors, acupuncturists, yoga and movement instructors. Mission-aligned tenants who market the campus by existing there.</p>
+        </div>
+        <div class="revenue-card">
+          <p class="revenue-card-label">Tier 2 — Agency Offices</p>
+          <h3>6–10 Nonprofit & Wrap-Around Service Organizations</h3>
+          <div class="revenue-card-amount">$800–$1,200/mo per office</div>
+          <p>Workforce development, legal aid, financial counseling, housing assistance, reentry services, veteran services. Bootcamp participants walk downstairs to access services in the same building.</p>
+        </div>
+        <div class="revenue-card">
+          <p class="revenue-card-label">Tier 3 — Co-Working</p>
+          <h3>Day Passes & Monthly Memberships</h3>
+          <div class="revenue-card-amount">$150–$300/mo</div>
+          <p>Open to community — entrepreneurs, remote workers, freelancers, students. Gym access included in all memberships. Professional workspace in a mission-aligned environment.</p>
+        </div>
+        <div class="revenue-card">
+          <p class="revenue-card-label">Tier 4 — Lab & Space Rentals</p>
+          <h3>Auditorium, Conference Rooms, Media Lab, Tech Lab</h3>
+          <div class="revenue-card-amount">$50–$150/hr per session</div>
+          <p>Per-session block rentals for tenants, community members, and external organizations. Speaking engagements, community events, content production, training certifications.</p>
+        </div>
+        <div class="revenue-card">
+          <p class="revenue-card-label">Tier 5 — Ventures LLC Lease</p>
+          <h3>Growing Beds + Lab Access</h3>
+          <div class="revenue-card-amount">Fair market value</div>
+          <p>Bodytruth Ventures leases defined growing beds on the grounds and lab access. Board-approved, founder-recused, clean audit trail. Same model as every other tenant.</p>
+        </div>
+        <div class="revenue-card">
+          <p class="revenue-card-label">Program Revenue</p>
+          <h3>Bootcamp Co-Pays + Standalone Workshops</h3>
+          <div class="revenue-card-amount">$99 co-pay + workshop fees</div>
+          <p>Program participants pay a $99 co-pay with grant/WIOA/VR&E funding covering the balance. Standalone monthly workshops at $15–$25. Meaningful earned revenue on top of lease income.</p>
+        </div>
+      </div>
+
+      <div class="revenue-total-block">
+        <div>
+          <div class="revenue-total-num">$252K–$282K</div>
+          <div class="revenue-total-label">Estimated Annual Recurring Lease & Membership Revenue</div>
+        </div>
+        <div class="revenue-total-note">
+          Lease and membership income alone — before a single grant is awarded. Program fees and grants compound on top. This model is not grant-dependent. It is designed to sustain itself.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THE BUDGET
        ============================================================ -->
   <section class="section budget-section" aria-label="Budget — expense to outcome">
     <div class="wrap">
       <span class="eyebrow">The Budget</span>
       <h2>Every Dollar. Accounted For.</h2>
       <p style="margin-top:1rem; color:var(--text-muted); max-width:640px;">
-        Expense to outcome. This is where the money goes and what it produces.
+        Expense to outcome. Phased by priority. The campus generates revenue in Phase 1 that offsets what Phase 2 and Phase 3 require.
       </p>
 
       <!-- PHASE 1 -->
@@ -761,10 +914,10 @@
         <div class="budget-phase-label">Phase 1 — Year One Operations · $75,000</div>
         <div class="budget-item">
           <div class="budget-item-top">
-            <div class="budget-item-name">Cohort delivery — 3 cohorts × 12 participants at market rate $1,500/participant<small>Includes facilitator compensation</small></div>
+            <div class="budget-item-name">Cohort delivery — 3 facilitators × 2 cohorts × avg 18 participants<small>Includes facilitator compensation · market rate $1,500/participant</small></div>
             <div class="budget-item-amount">$54,000</div>
           </div>
-          <div class="budget-item-outcome">36 participants · 36 Capital Plans · 22+ enterprises launched</div>
+          <div class="budget-item-outcome">72–108 participants · 61–92 Capital Plans · 25–35 enterprises launched</div>
         </div>
         <div class="budget-item">
           <div class="budget-item-top">
@@ -798,12 +951,12 @@
         <div class="budget-phase-label">Phase 2 — Capacity Building · $25,000</div>
         <div style="padding:1rem 1.25rem; background:rgba(45,106,31,0.06); border:1px solid rgba(45,106,31,0.15); border-top:none;">
           <p style="font-family:'Lora',Georgia,serif; font-style:italic; font-size:0.93rem; color:var(--deep-green); margin:0; line-height:1.75;">
-            This is exactly what we teach our learners — the organizational infrastructure that makes an enterprise fundable and sustainable. <strong style="font-style:normal;">We walk the talk.</strong>
+            501(c)(3) filing is in progress. This phase funds the organizational infrastructure that makes every future grant possible. <strong style="font-style:normal;">We teach this. We walk it.</strong>
           </p>
         </div>
         <div class="budget-item">
           <div class="budget-item-top">
-            <div class="budget-item-name">501(c)(3) application, legal, filing</div>
+            <div class="budget-item-name">501(c)(3) application, legal, filing<small>In progress — filing cost partially incurred</small></div>
             <div class="budget-item-amount">$5,000</div>
           </div>
           <div class="budget-item-outcome">Tax-exempt status · donor deductibility · full grant eligibility</div>
@@ -837,33 +990,53 @@
 
       <!-- PHASE 3 -->
       <div class="budget-phase">
-        <div class="budget-phase-label">Phase 3 — Land & Facility · Capital Campaign: $1.025M–$1.375M</div>
-        <div class="budget-item">
-          <div class="budget-item-top">
-            <div class="budget-item-name">Land acquisition — 10+ acres, Southeast Michigan<small>Open to donation, below-market sale, or land trust arrangement</small></div>
-            <div class="budget-item-amount">$100K–$700K</div>
-          </div>
-          <div class="budget-item-outcome">Land Enterprise Collaborative · farm incubator · campus foundation</div>
+        <div class="budget-phase-label">Phase 3 — Campus Acquisition & Conversion · $2.1M</div>
+        <div style="padding:1rem 1.25rem; background:rgba(42,138,126,0.06); border:1px solid rgba(42,138,126,0.15); border-top:none;">
+          <p style="font-family:'Lora',Georgia,serif; font-style:italic; font-size:0.93rem; color:var(--teal); margin:0; line-height:1.75;">
+            305 W Elizabeth St, Stockbridge MI — 70,500 SF across 3 buildings on 4.6 acres. Acquired at $4.52/SF. The campus generates $252,000–$282,000/year in recurring lease revenue. <strong style="font-style:normal;">The building pays for itself.</strong>
+          </p>
         </div>
         <div class="budget-item">
           <div class="budget-item-top">
-            <div class="budget-item-name">The Artie Short Community Learning Center — construction or fit-out</div>
-            <div class="budget-item-amount">$175K–$625K</div>
+            <div class="budget-item-name">Property acquisition — 305 W Elizabeth St<small>Negotiating from listed $319K — 3 months on market</small></div>
+            <div class="budget-item-amount">$280K–$319K</div>
           </div>
-          <div class="budget-item-outcome">Classroom · media lab · tech lab · event pavilion · 12-laptop library</div>
+          <div class="budget-item-outcome">70,500 SF + 4.6 acres · full ownership · clean title · Foundation landlord position established</div>
         </div>
         <div class="budget-item">
           <div class="budget-item-top">
-            <div class="budget-item-name">Bodytruth Kitchen Incubator — 6 commercial bays</div>
-            <div class="budget-item-amount">$300K–$500K</div>
+            <div class="budget-item-name">Phase 1 buildout — grounds, machine shop, lower offices, ADA, HVAC/electrical<small>1920 building — contingency built into range</small></div>
+            <div class="budget-item-amount">$560K–$894K</div>
           </div>
-          <div class="budget-item-outcome">Graduate incubator leases · ServSafe hub · workshop infrastructure</div>
+          <div class="budget-item-outcome">Open for program delivery · tenant-ready lower offices · machine shop training space · ADA compliance · raised beds + greenhouse</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Phase 2 buildout — commercial kitchen incubator + upper wellness suites<small>Contingent on air quality and mold assessment — do not assume</small></div>
+            <div class="budget-item-amount">$250K–$500K</div>
+          </div>
+          <div class="budget-item-outcome">6-bay commercial kitchen · incubator leases for graduates · 8–12 wellness business suites · full tenant stack activated</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">HR — skeleton crew Year 1 at campus<small>Offset through WIOA contracts + VR&E veteran hiring subsidies</small></div>
+            <div class="budget-item-amount">$200K–$350K</div>
+          </div>
+          <div class="budget-item-outcome">8–12 living-wage jobs created · campus operated · programs delivered · tenants served</div>
+        </div>
+        <div class="budget-item">
+          <div class="budget-item-top">
+            <div class="budget-item-name">Operating reserves</div>
+            <div class="budget-item-amount">$150K–$300K</div>
+          </div>
+          <div class="budget-item-outcome">Operational buffer · first-year stability on a 1920 building · funder confidence</div>
         </div>
         <div class="budget-total-row">
-          <span>Phase 3 Total — Land & Facility</span>
-          <strong>$1.025M–$1.375M</strong>
+          <span>Phase 3 Total — Campus Acquisition & Conversion</span>
+          <strong>$2.1M</strong>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -875,35 +1048,93 @@
       <span class="eyebrow eyebrow--white">The Ask</span>
       <h2>Where Your Investment Goes.</h2>
       <p class="lora">
-        We are not asking for everything at once. We are asking for what moves the work forward — right now — and what builds toward the full vision. Every dollar is accounted for. Every dollar produces something measurable.
+        We are not asking for everything at once. We are asking for what moves the work forward right now — and what builds toward the full campus. Every dollar is accounted for. Every dollar produces something you can point to.
       </p>
+
+      <div class="ask-total">
+        <div class="ask-total-num">$2.2M</div>
+        <div class="ask-total-label">Total Capital Ask — Full Vision, Both Phases</div>
+      </div>
 
       <div class="ask-grid">
         <div class="ask-card">
           <div class="ask-card-amount">$75,000</div>
           <h3>Year One Operations</h3>
-          <p>Three cohorts. 36 participants. 36 Capital Plans. 22+ enterprises launched. The full first year of program delivery, staffed and equipped.</p>
+          <p>Three facilitators. Six cohorts. 72–108 participants. 61–92 Capital Plans produced. 25–35 enterprises launched. The full first year of program delivery, staffed and equipped.</p>
         </div>
         <div class="ask-card">
           <div class="ask-card-amount">$25,000</div>
           <h3>Capacity Building</h3>
-          <p>501(c)(3) filing, governance infrastructure, financial systems, insurance, and HR foundation. The organizational infrastructure that makes every future grant possible.</p>
+          <p>501(c)(3) in progress. Governance infrastructure, financial systems, insurance, and HR foundation. The organizational infrastructure that makes every future grant possible.</p>
         </div>
-        <div class="ask-card">
-          <div class="ask-card-amount">$1.025M–$1.375M</div>
-          <h3>Land & Facility</h3>
-          <p>The campus. The Artie Short Community Learning Center. The Kitchen Incubator. The physical home of everything the Foundation teaches. Phase Three — the capital campaign.</p>
-        </div>
-        <div class="ask-card">
+        <div class="ask-card ask-card--highlight">
           <div class="ask-card-amount">$100,000</div>
-          <h3>Year One Total Ask</h3>
-          <p>Operations plus capacity building. The immediate need. What it takes to run the first year right and build the organizational foundation for everything that follows.</p>
+          <h3>Immediate Ask — Unlock Year One</h3>
+          <p>Operations plus capacity building. The right-now number. What it takes to run the first year right and build the organizational foundation for the campus raise.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem; padding:0.75rem 1.25rem; background:rgba(255,255,255,0.1); border-radius:var(--radius); max-width:860px;">
+        <p style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin:0; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">The Campaign Raise</p>
+      </div>
+
+      <div class="ask-grid" style="margin-top:0.75rem; grid-template-columns:1fr;">
+        <div class="ask-card" style="max-width:860px;">
+          <div class="ask-card-amount">$2.1M</div>
+          <h3>Phase 3 — Campus Acquisition & Conversion</h3>
+          <p>305 W Elizabeth St, Stockbridge MI. Acquisition ($280K–$319K) + Phase 1 buildout ($560K–$894K) + Phase 2 buildout ($250K–$500K) + skeleton crew HR ($200K–$350K) + operating reserves ($150K–$300K). The campus generates $252,000–$282,000/year in recurring lease revenue. It pays for itself.</p>
+        </div>
+      </div>
+
+      <div class="funding-stack">
+        <div class="funding-stack-label">Funding Stack — How $2.2M Gets Raised</div>
+        <div class="funding-stack-item">
+          <div>
+            <div class="funding-stack-source">USDA Community Facilities Program</div>
+            <div class="funding-stack-type">Direct loan + grant · Rural classification clean · Acquisition AND renovation eligible</div>
+          </div>
+          <div class="funding-stack-amount">Primary</div>
+        </div>
+        <div class="funding-stack-item">
+          <div>
+            <div class="funding-stack-source">Michigan MEDC Adaptive Reuse</div>
+            <div class="funding-stack-type">Grant / incentive · Surplus school redevelopment is an active MEDC priority</div>
+          </div>
+          <div class="funding-stack-amount">Grant</div>
+        </div>
+        <div class="funding-stack-item">
+          <div>
+            <div class="funding-stack-source">Michigan Historic Preservation Tax Credits</div>
+            <div class="funding-stack-type">Tax credit · 1920 construction — designation check in progress</div>
+          </div>
+          <div class="funding-stack-amount">Credit</div>
+        </div>
+        <div class="funding-stack-item">
+          <div>
+            <div class="funding-stack-source">Foundation Capital Campaign — Major Gifts</div>
+            <div class="funding-stack-type">Donations · anchor ask to aligned funders and community investors</div>
+          </div>
+          <div class="funding-stack-amount">Campaign</div>
+        </div>
+        <div class="funding-stack-item">
+          <div>
+            <div class="funding-stack-source">WIOA / VR&E Workforce Funding</div>
+            <div class="funding-stack-type">Federal contracts · offsets HR costs · not capital but directly reduces burn</div>
+          </div>
+          <div class="funding-stack-amount">Offset</div>
+        </div>
+        <div class="funding-stack-item">
+          <div>
+            <div class="funding-stack-source">Campus Lease Income (Phase 1 offices, Day 1)</div>
+            <div class="funding-stack-type">Earned revenue · agency and co-working leases begin at occupancy</div>
+          </div>
+          <div class="funding-stack-amount">Earned</div>
         </div>
       </div>
 
       <div class="ask-model-note">
         <p>
-          501(c)(3) status is pending. Fiscal sponsorship arrangements are available for time-sensitive gifts. The Foundation's self-sustainability model — Bodytruth Ventures leasing space from the Foundation, the FundReady methodology generating earned income — means this organization is not designed to be perpetually grant-dependent. Your investment builds something that can sustain itself.
+          501(c)(3) status is pending. Fiscal sponsorship arrangements are available for time-sensitive gifts. The Foundation's self-sustainability model — tenant lease revenue, FundReady methodology earned income, WIOA workforce contracts — means this organization is not designed to be perpetually grant-dependent. Your investment builds something that sustains itself, and something that gets stronger every time a cohort graduates.
         </p>
       </div>
     </div>
@@ -921,7 +1152,7 @@
           Artie Short is still fishing. Still cooking. Still growing things. Still showing people how. We are building a center that carries his name while he is here to walk through the door — and we intend to finish it.
         </p>
         <p class="lora">
-          If you see what we see — if you believe that the right training, delivered to the right people, with the right infrastructure behind it, produces outcomes that compound for generations — we want to hear from you.
+          If you see what we see — if you believe that the right training, delivered to the right people, in the right building, with the right infrastructure behind it, produces outcomes that compound for generations — we want to hear from you.
         </p>
 
         <div class="pull-quote pull-quote--dark">
@@ -974,7 +1205,6 @@
   </section>
 
   <div class="footer-stripe" aria-hidden="true"></div>
-
   <div class="confidential-bar">
     <p>© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · Confidential · By Invitation Only</p>
   </div>
