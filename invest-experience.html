@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:image" content="https://bodytruthfamilyfarms.org/images/invest-exp-hero.png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bodytruthfamilyfarms.org/images/invest-exp-hero.png">
+  <meta name="description" content="A place where people remember what becomes possible. The Artie Short Community Learning Center — Bodytruth Family Farms Educational Foundation.">
+  <title>Come Experience the World We Are Building — Bodytruth Family Farms Educational Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-green:   #2d6a1f;
+      --bright-green: #62af41;
+      --forest:       #1a3a1f;
+      --amber:        #e8a020;
+      --amber-light:  #fdf3dc;
+      --terracotta:   #c4622d;
+      --teal:         #2a8a7e;
+      --white:        #ffffff;
+      --warm-white:   #fafaf8;
+      --near-black:   #1a1a1a;
+      --text-body:    #2c2c2c;
+      --text-muted:   #6b6b6b;
+      --rule:         rgba(0,0,0,0.08);
+      --max-width:    1200px;
+      --radius:       10px;
+      --radius-sm:    6px;
+      --radius-lg:    18px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; text-decoration: none; }
+    h1  { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+    h2  { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(1.75rem, 5vw, 2.9rem); }
+    h3  { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; font-size: clamp(1rem, 3vw, 1.35rem); }
+    .lora        { font-family: 'Lora', Georgia, serif; font-size: clamp(1rem, 2.5vw, 1.15rem); line-height: 1.9; }
+    .lora-italic { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1rem, 2.5vw, 1.15rem); line-height: 1.9; }
+    .eyebrow {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--bright-green); margin-bottom: 0.9rem;
+    }
+    .eyebrow--amber { color: var(--amber); }
+    .eyebrow--white { color: rgba(255,255,255,0.65); }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; }
+    @media (min-width: 640px)  { .wrap { padding: 0 2rem; } }
+    @media (min-width: 1024px) { .wrap { padding: 0 2.5rem; } }
+    .section { padding: 4rem 0; }
+    @media (min-width: 768px) { .section { padding: 6.5rem 0; } }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      font-family: 'Inter', sans-serif; font-size: 0.93rem; font-weight: 600;
+      padding: 0.85rem 1.75rem; border-radius: var(--radius-sm);
+      border: none; cursor: pointer; transition: all 0.18s ease;
+      min-height: 50px; white-space: nowrap;
+    }
+    .btn-green { background: var(--bright-green); color: var(--white); }
+    .btn-green:hover { background: var(--deep-green); }
+    .btn-amber { background: var(--amber); color: var(--white); }
+    .btn-amber:hover { background: #c8891a; }
+    .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.55); }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+    /* VERSION NAV */
+    .version-nav {
+      background: var(--forest); padding: 0.7rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.6rem; position: sticky; top: 0; z-index: 100;
+    }
+    .version-nav-label {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+    }
+    .version-nav-links { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .version-pill {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; padding: 0.28rem 0.85rem;
+      border-radius: 100px; transition: all 0.15s;
+    }
+    .version-pill--active { background: var(--bright-green); color: var(--white); }
+    .version-pill--inactive {
+      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .version-pill--inactive:hover { background: rgba(255,255,255,0.14); color: var(--white); }
+
+    /* HERO */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: flex-end; overflow: hidden;
+      background: var(--forest);
+    }
+    .hero-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 40%;
+      opacity: 0.5;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top,
+        rgba(10,20,10,0.97) 0%,
+        rgba(10,20,10,0.5) 50%,
+        rgba(10,20,10,0.1) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; width: 100%; padding: 0 0 4rem; }
+    .hero h1 {
+      font-size: clamp(2.2rem, 8vw, 5rem);
+      color: var(--white); margin-bottom: 1.5rem; max-width: 800px;
+    }
+    .hero h1 em { font-family: 'Lora', Georgia, serif; font-style: italic; color: var(--bright-green); font-weight: 400; }
+    .hero-sub {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.9; margin-bottom: 2rem;
+    }
+    .hero-dedication { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .hero-dedication-desc {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.25rem;
+    }
+    .hero-dedication-name { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 1rem; color: var(--bright-green); }
+
+    /* IDENTITY SECTION */
+    .identity-section { background: var(--white); }
+    .identity-layout {
+      display: grid; grid-template-columns: 1fr;
+      gap: 2.5rem; margin-top: 2.5rem; align-items: start;
+    }
+    @media (min-width: 768px) { .identity-layout { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+    .identity-img {
+      width: 100%; border-radius: var(--radius-lg);
+      object-fit: cover; aspect-ratio: 4/5;
+      order: -1;
+    }
+    @media (min-width: 768px) { .identity-img { order: 1; } }
+    .identity-list { margin: 1.75rem 0 2rem; }
+    .identity-line {
+      display: flex; align-items: baseline; gap: 0.9rem;
+      padding: 0.8rem 0; border-bottom: 1px solid var(--rule);
+      font-family: 'Lora', Georgia, serif; font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.1rem); color: var(--text-body); line-height: 1.6;
+    }
+    .identity-line:last-child { border-bottom: none; }
+    .identity-line::before {
+      content: ''; display: inline-block; flex-shrink: 0;
+      width: 6px; height: 6px; background: var(--bright-green);
+      border-radius: 50%; position: relative; top: -1px;
+    }
+    .identity-anchor {
+      padding: 1.75rem 2rem; background: var(--forest); border-radius: var(--radius-lg); margin-top: 1.5rem;
+    }
+    .identity-anchor p { font-family: 'Lora', Georgia, serif; font-size: clamp(0.95rem, 2vw, 1.05rem); color: rgba(255,255,255,0.88); line-height: 1.9; margin: 0; }
+    .identity-anchor strong { color: var(--bright-green); font-style: normal; }
+
+    /* ENVIRONMENT SECTION */
+    .environment-section { background: var(--warm-white); }
+    .environment-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 1.25rem; margin-top: 2.5rem;
+    }
+    @media (min-width: 640px)  { .environment-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .environment-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .env-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      border: 1.5px solid var(--rule); overflow: hidden;
+    }
+    .env-card-img {
+      width: 100%; aspect-ratio: 16/9;
+      object-fit: cover; display: block;
+    }
+    .env-card-body { padding: 1.5rem 1.5rem 1.75rem; }
+    .env-card h3 { font-size: 1rem; color: var(--near-black); margin-bottom: 0.5rem; letter-spacing: 0; }
+    .env-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; margin: 0; }
+    .environment-statement {
+      margin-top: 2.5rem; padding: 2rem 2.25rem;
+      background: var(--forest); border-radius: var(--radius-lg);
+    }
+    .environment-statement p {
+      font-family: 'Lora', Georgia, serif; font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.2rem); color: rgba(255,255,255,0.88); line-height: 1.9; margin: 0;
+    }
+    .environment-statement strong { color: var(--bright-green); font-style: normal; }
+
+    /* WALK SECTION */
+    .walk-section { background: var(--forest); position: relative; overflow: hidden; }
+    .walk-morning-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0.15;
+    }
+    .walk-section .wrap { position: relative; z-index: 2; }
+    .walk-section h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .walk-section .lora { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; }
+    .walk-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 720px; }
+    .walk-moment {
+      display: grid; grid-template-columns: 1.25rem 1fr;
+      gap: 1.1rem; padding: 1.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07); align-items: start;
+    }
+    .walk-moment:last-child { border-bottom: none; }
+    .walk-dot { width: 9px; height: 9px; background: var(--bright-green); border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0; }
+    .walk-moment-text { font-family: 'Lora', Georgia, serif; font-size: clamp(0.95rem, 2.5vw, 1.1rem); color: rgba(255,255,255,0.82); line-height: 1.85; }
+    .walk-moment-text strong {
+      color: var(--bright-green); font-style: normal; font-weight: 700;
+      display: block; font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem;
+    }
+
+    /* PROOF SECTION */
+    .proof-section { background: var(--white); }
+    .proof-timeline { max-width: 760px; margin-top: 2.5rem; }
+    .proof-item {
+      display: grid; grid-template-columns: 4.5rem 1fr;
+      gap: 1.25rem; padding: 1.5rem 0;
+      border-bottom: 1px solid var(--rule); align-items: start;
+    }
+    @media (min-width: 480px) { .proof-item { grid-template-columns: 5rem 1fr; gap: 1.5rem; } }
+    .proof-item:last-child { border-bottom: none; }
+    .proof-left { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+    .proof-year { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--deep-green); letter-spacing: -0.02em; line-height: 1; }
+    .proof-thumb { width: 100%; aspect-ratio: 1; border-radius: var(--radius-sm); object-fit: cover; }
+    .proof-item h3 { font-size: 0.95rem; color: var(--near-black); margin-bottom: 0.4rem; letter-spacing: 0; }
+    .proof-item p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; margin: 0; }
+    .proof-principle {
+      margin-top: 2.5rem; max-width: 760px; padding: 1.75rem 2rem;
+      background: var(--amber-light); border-left: 4px solid var(--amber);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+    .proof-principle p { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--near-black); line-height: 1.85; margin: 0; }
+    .proof-principle strong { color: var(--deep-green); font-style: normal; }
+
+    /* DEMO SECTION */
+    .demo-section { background: var(--warm-white); }
+    .demo-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 2.5rem; align-items: start; max-width: 960px; margin-top: 2.5rem;
+    }
+    @media (min-width: 768px) { .demo-grid { grid-template-columns: 1fr 1fr; } }
+    .demo-text p { font-size: 0.93rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem; }
+    .demo-text p:last-child { margin-bottom: 0; }
+    .demo-venture-card { background: var(--forest); border-radius: var(--radius-lg); overflow: hidden; }
+    .demo-product-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .demo-venture-body { padding: 1.75rem 2rem 2rem; }
+    .demo-venture-body .eyebrow { color: var(--bright-green); margin-bottom: 0.6rem; }
+    .demo-venture-body h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 0.5rem; letter-spacing: 0; }
+    .demo-venture-body p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-top: 0.5rem; }
+    .demo-venture-items { margin-top: 1.5rem; display: flex; flex-direction: column; }
+    .demo-venture-item {
+      display: flex; align-items: baseline; gap: 0.7rem;
+      padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6;
+    }
+    .demo-venture-item:last-child { border-bottom: none; }
+    .demo-venture-item::before { content: '→'; color: var(--bright-green); flex-shrink: 0; font-weight: 700; }
+
+    /* FUTURE SECTION */
+    .future-section { background: var(--forest); }
+    .future-section h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .future-section > .wrap > .lora { color: rgba(255,255,255,0.65); margin-bottom: 3rem; }
+    .future-anchor-img {
+      width: 100%; aspect-ratio: 21/9; object-fit: cover;
+      border-radius: var(--radius-lg); margin-bottom: 2.5rem;
+      opacity: 0.75;
+    }
+    @media (max-width: 640px) { .future-anchor-img { aspect-ratio: 16/9; } }
+    .future-scenes { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+    @media (min-width: 640px) { .future-scenes { grid-template-columns: 1fr 1fr; } }
+    .future-scene {
+      border-radius: var(--radius-lg); overflow: hidden;
+      border-top: 3px solid var(--bright-green);
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-top: 3px solid var(--bright-green);
+    }
+    .future-scene--amber { border-top-color: var(--amber); }
+    .future-scene--teal  { border-top-color: var(--teal); }
+    .future-scene--terra { border-top-color: var(--terracotta); }
+    .future-scene-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .future-scene-body { padding: 1.5rem 1.5rem 1.75rem; }
+    .future-scene-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--bright-green); margin-bottom: 0.65rem;
+    }
+    .future-scene--amber .future-scene-label { color: var(--amber); }
+    .future-scene--teal  .future-scene-label { color: var(--teal); }
+    .future-scene--terra .future-scene-label { color: var(--terracotta); }
+    .future-scene p { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.85; margin: 0; }
+
+    /* CLOSING */
+    .closing-section { background: var(--deep-green); }
+    .closing-inner { max-width: 760px; }
+    .closing-section h2 { color: var(--white); margin-bottom: 1.25rem; }
+    .closing-section .lora { color: rgba(255,255,255,0.8); margin-bottom: 1.1rem; }
+    .closing-img {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover;
+      border-radius: var(--radius-lg); margin: 2.5rem 0;
+      object-position: center top;
+    }
+    .contact-block {
+      margin-top: 2.5rem; padding: 2rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg);
+    }
+    .contact-name { font-weight: 700; color: var(--white); font-size: 1rem; }
+    .contact-title { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 1.1rem; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
+    .contact-link { font-size: 0.85rem; color: var(--bright-green); font-weight: 600; transition: color 0.15s; }
+    .contact-link:hover { color: var(--white); }
+    .contact-response { margin-top: 0.9rem; font-size: 0.78rem; color: rgba(255,255,255,0.3); font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- VERSION NAV -->
+  <nav class="version-nav" aria-label="Page versions">
+    <span class="version-nav-label">Two ways to explore the vision</span>
+    <div class="version-nav-links">
+      <span class="version-pill version-pill--active">The Experience</span>
+      <a href="invest.html" class="version-pill version-pill--inactive">The Infrastructure →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Opening">
+    <img
+      class="hero-bg"
+      src="https://bodytruthfamilyfarms.org/images/invest-exp-hero.png"
+      alt="The Artie Short Community Learning Center"
+      fetchpriority="high"
+    >
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <span class="eyebrow eyebrow--white">Bodytruth Family Farms Educational Foundation</span>
+        <h1>A Place Where People Remember<br><em>What Becomes Possible</em></h1>
+        <p class="hero-sub">
+          Some things are easier to feel than to explain.
+          For the infrastructure, the economics, and the campaign details —
+          <a href="invest.html" style="color:var(--bright-green); font-weight:600;">see the investment page →</a>
+        </p>
+        <div class="cta-row">
+          <a href="#identity" class="btn btn-green">Read the story</a>
+          <a href="invest.html" class="btn btn-outline-white">See the infrastructure →</a>
+        </div>
+        <div class="hero-dedication">
+          <p class="hero-dedication-desc">Named in honor of</p>
+          <p class="hero-dedication-name">Artie Short — Father, Veteran, Brother, Friend</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENING IDENTITY -->
+  <section class="section identity-section" id="identity" aria-label="Opening identity">
+    <div class="wrap">
+      <span class="eyebrow">The Observation</span>
+      <h2>People flourish when they feel safe enough to become themselves.</h2>
+      <div class="identity-layout">
+        <div class="identity-text">
+          <div class="identity-list" role="list">
+            <div class="identity-line" role="listitem">Some people find healing in therapy rooms.</div>
+            <div class="identity-line" role="listitem">Some find it in churches.</div>
+            <div class="identity-line" role="listitem">Some find it while fishing.</div>
+            <div class="identity-line" role="listitem">Some find it with their hands in soil.</div>
+            <div class="identity-line" role="listitem">Some find it while making soap.</div>
+            <div class="identity-line" role="listitem">Some find it because one person finally saw them.</div>
+          </div>
+          <div class="identity-anchor">
+            <p>
+              Bodytruth was built on a simple observation accumulated over seventeen years and across many communities:<br><br>
+              <strong>People rarely arrive needing only information.</strong> They often arrive carrying fear, exhaustion, rejection, grief, isolation, or the weight of experiences that shaped how they see themselves and what they believe is possible for them.<br><br>
+              Knowledge alone does not create movement. People need environments where they feel safe enough — seen enough — to act on what they already know.<br><br>
+              This is the environment we are building.
+            </p>
+          </div>
+        </div>
+        <img
+          class="identity-img"
+          src="https://bodytruthfamilyfarms.org/images/invest-exp-observation-artie.png"
+          alt="Artie Short — Vietnam Veteran, in his garden"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ENVIRONMENT -->
+  <section class="section environment-section" aria-label="The environment">
+    <div class="wrap">
+      <span class="eyebrow">The Experience</span>
+      <h2>Not just a building. An environment.</h2>
+      <p class="lora" style="margin-top:1rem; max-width:640px; color:var(--text-muted);">
+        The Artie Short Community Learning Center — the ASC — is designed around what people need in order to build, not only what they need in order to learn.
+      </p>
+      <div class="environment-grid">
+
+        <div class="env-card">
+          <img class="env-card-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-env-1-exhale.png" alt="A place to exhale — peaceful moment outside" loading="lazy">
+          <div class="env-card-body">
+            <h3>A place to exhale</h3>
+            <p>Nervous systems need to settle before they can absorb. The campus is designed to feel alive and grounded — gardens growing, natural light, spaces that feel human — so that people arrive and feel something release before a single lesson begins.</p>
+          </div>
+        </div>
+
+        <div class="env-card">
+          <img class="env-card-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-env-2-learning.png" alt="Learning without shame — two people in conversation" loading="lazy">
+          <div class="env-card-body">
+            <h3>Learning without shame</h3>
+            <p>People carry invisible things while trying to build visible things. The environment makes space for that — not by making it the center of the work, but by designing spaces where people do not have to earn safety, prove their worthiness, or navigate everything alone.</p>
+          </div>
+        </div>
+
+        <div class="env-card">
+          <img class="env-card-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-env-3-ventures.png" alt="Entrepreneurship made visible — Bodytruth products on a shelf" loading="lazy">
+          <div class="env-card-body">
+            <h3>Entrepreneurship made visible</h3>
+            <p>Bodytruth Ventures operates on campus not only to generate revenue but to demonstrate. Participants see a real enterprise functioning — soap curing on shelves, product decisions being made, operations in motion. The gap between concept and implementation becomes something they can observe rather than only imagine.</p>
+          </div>
+        </div>
+
+        <div class="env-card">
+          <img class="env-card-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-env-4-builders.png" alt="Builders beside builders — people working in proximity" loading="lazy">
+          <div class="env-card-body">
+            <h3>Builders beside builders</h3>
+            <p>Veterans, creators, growers, healers, and community builders sharing space. A food entrepreneur in the kitchen. A nonprofit founder mapping a grant strategy. A veteran learning farm systems. An Earth Keeper passing down forty years of what works. The campus teaches by the company it keeps.</p>
+          </div>
+        </div>
+
+        <div class="env-card">
+          <img class="env-card-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-env-5-campus.png" alt="The campus as classroom — hands doing something" loading="lazy">
+          <div class="env-card-body">
+            <h3>The campus as classroom</h3>
+            <p>The gardens are curriculum. The machine shop is curriculum. The kitchen is curriculum. The co-working space where a resident entrepreneur fields a business call — that is curriculum too. Learning is visible everywhere, not confined to a room with chairs and a whiteboard.</p>
+          </div>
+        </div>
+
+        <div class="env-card">
+          <img class="env-card-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-env-6-stewardship.png" alt="Stewardship over transaction — passing knowledge down" loading="lazy">
+          <div class="env-card-body">
+            <h3>Stewardship over transaction</h3>
+            <p>No one here is simply occupying space. Resident partners contribute expertise. Earth Keepers contribute wisdom. Graduates return as mentors. The ecosystem sustains itself because everyone in it gives as well as receives. That is the culture, built in from the start.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="environment-statement">
+        <p>
+          The work became creating environments where people do not have to earn safety, prove their worthiness, or navigate everything alone. <strong>The product changes. The underlying purpose does not.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- A MORNING AT THE ASC -->
+  <section class="section walk-section" aria-label="A morning at the campus">
+    <img
+      class="walk-morning-img"
+      src="https://bodytruthfamilyfarms.org/images/invest-exp-morning-wide.png"
+      alt="Early morning at the campus grounds"
+      loading="lazy"
+    >
+    <div class="wrap">
+      <span class="eyebrow eyebrow--white">A Morning at the ASC</span>
+      <h2 style="color:var(--white);">Come walk the property.</h2>
+      <p class="lora">This is what we are building. What it will feel like to arrive.</p>
+      <div class="walk-grid">
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>Before anyone else arrives</strong>
+            Morning begins in the gardens. The Earth Keepers are already there — tending beds, checking on hoop houses, moving through the grounds with the ease of people who know exactly where they belong.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>First light through the windows</strong>
+            The welcome desk comes alive. Someone who has been through the program greets the people coming in — because they know what it felt like to walk through that door for the first time and not be sure they belonged.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>Mid-morning in the classrooms</strong>
+            A FundReady cohort is building. Not completing worksheets — building. A Capital Map, a business plan, an operational structure they did not have before they walked in eight weeks ago. A nonprofit founder realizes mid-session that she already knows more than she thought she did.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>In the kitchen</strong>
+            Someone is learning to preserve what the garden grew. Jars line a table. A recipe becomes a product. A product becomes a business idea that is possible because the kitchen is here and the bootcamp is upstairs and the grant readiness cohort meets on Thursdays.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>In the maker space</strong>
+            A veteran is building something with his hands for the first time in years. He does not have words yet for why this feels important. He just keeps working.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>Afternoon in co-working</strong>
+            Entrepreneurs work beside one another. Not networking — just working, in proximity, which turns out to be its own kind of medicine for people who have been building alone.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>At the end of the day</strong>
+            Harvest leaves the grounds and enters homes. Children who came with their parents have seen something today they will not be able to explain but will carry — what it looks like when adults build things together on purpose.
+          </div>
+        </div>
+        <div class="walk-moment">
+          <div class="walk-dot"></div>
+          <div class="walk-moment-text">
+            <strong>After the last class</strong>
+            Someone sits in the library for a few minutes before heading home. Not reading. Just sitting. Sometimes that is the whole point — a place where you do not have to be doing something to belong.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS WORKS -->
+  <section class="section proof-section" aria-label="Why this works">
+    <div class="wrap">
+      <span class="eyebrow">Seventeen Years of Evidence</span>
+      <h2>People return to environments where they feel seen.</h2>
+      <p class="lora" style="margin-top:1rem; max-width:640px; color:var(--text-muted);">
+        This is not a theory. It has shown up the same way in every environment Stephanie has built — across communities, products, programs, and years.
+      </p>
+      <div class="proof-timeline">
+
+        <div class="proof-item">
+          <div class="proof-left">
+            <div class="proof-year">2009</div>
+            <img class="proof-thumb" src="https://bodytruthfamilyfarms.org/images/invest-exp-proof-garden.png" alt="Community garden — Detroit" loading="lazy">
+          </div>
+          <div>
+            <h3>The Community Garden — Detroit</h3>
+            <p>People came to grow food. They kept coming because of what it felt like to tend something together — to have a reason to show up and a place where showing up mattered. The garden was the product. The belonging was the reason.</p>
+          </div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-left">
+            <div class="proof-year">2015</div>
+            <img class="proof-thumb" src="https://bodytruthfamilyfarms.org/images/invest-exp-proof-apothecary.png" alt="Bodytruth Soap Apothecary" loading="lazy">
+          </div>
+          <div>
+            <h3>The Soap Apothecary</h3>
+            <p>People came for clean products. They kept coming because the store felt like something — calm, intentional, made with care. They brought people they loved. They came back on hard days. It was not just a shop. It was a space that made people feel something worth feeling.</p>
+          </div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-left">
+            <div class="proof-year">2016</div>
+            <img class="proof-thumb" src="https://bodytruthfamilyfarms.org/images/invest-exp-proof-teaching.png" alt="Teaching programs at Detroit Public Library" loading="lazy">
+          </div>
+          <div>
+            <h3>Teaching Programs — Detroit Public Library</h3>
+            <p>People came to learn skills. They came back because the room felt safe. Because no one was assessed before they were welcomed. Because being seen as capable — before proving it — changed what they believed was possible for them.</p>
+          </div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-left">
+            <div class="proof-year">2019</div>
+            <img class="proof-thumb" src="https://bodytruthfamilyfarms.org/images/invest-exp-proof-kansas.png" alt="Kansas store and community space" loading="lazy">
+          </div>
+          <div>
+            <h3>The Kansas Store and Community Space</h3>
+            <p>People came for products and stayed because the space became a gathering place. A food pantry network grew out of it. A $180,000 COVID-response grant followed. None of that was the plan. All of it was possible because the environment had been built to hold more than transactions.</p>
+          </div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-left">
+            <div class="proof-year">2026</div>
+            <img class="proof-thumb" src="https://bodytruthfamilyfarms.org/images/invest-exp-proof-fundready.png" alt="FundReady methodology" loading="lazy">
+          </div>
+          <div>
+            <h3>FundReady — The Methodology</h3>
+            <p>Participants come to build fundable businesses and nonprofits. They return because the methodology sees them as capable of building something institutional before they believe it themselves. The CapScore, the Capital Map, the documented systems — all of it is designed to say: <em>you have more than you think you do.</em></p>
+          </div>
+        </div>
+
+      </div>
+      <div class="proof-principle">
+        <p>
+          The same principle showed up everywhere — the garden, the shop, the programs, the workshops, the methodology. <strong>The product changes. The underlying purpose does not.</strong> People return to environments where they feel seen. The ASC is built to be exactly that — at scale, permanently, and by design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMONSTRATION PHILOSOPHY -->
+  <section class="section demo-section" aria-label="Demonstration philosophy">
+    <div class="wrap">
+      <span class="eyebrow">The Philosophy</span>
+      <h2>We teach people to build what they want to become.<br>Therefore we must build it too.</h2>
+      <div class="demo-grid">
+        <div class="demo-text">
+          <p>Bodytruth Ventures — the farm and the soap apothecary — is not separate from the mission of the Foundation. It is evidence of it.</p>
+          <p>When a participant in the Land Enterprise Bootcamp walks the growing beds and sees a functioning farm enterprise, they are not looking at a case study. They are looking at a system in operation — decisions being made, problems being solved, products moving from soil to shelf.</p>
+          <p>That visibility matters. The gap between concept and implementation is often less about knowledge and more about the ability to imagine it being real.</p>
+          <p>Ventures says: <em>Look what becomes possible.</em></p>
+        </div>
+        <div class="demo-venture-card">
+          <img class="demo-product-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-ventures-product.png" alt="Bodytruth Ventures — products in production" loading="lazy">
+          <div class="demo-venture-body">
+            <span class="eyebrow">Bodytruth Farms Ventures LLC</span>
+            <h3>The Demonstration Enterprise</h3>
+            <p>Operates as a tenant on campus. Leases growing beds and lab space from the Foundation. Functions as both an enterprise and a living classroom.</p>
+            <div class="demo-venture-items">
+              <div class="demo-venture-item">Participants observe operations in real conditions</div>
+              <div class="demo-venture-item">Product development, branding, and systems — visible and in motion</div>
+              <div class="demo-venture-item">Farm to shelf — the full cycle, not a diagram of it</div>
+              <div class="demo-venture-item">Clean separation from the nonprofit maintained throughout</div>
+              <div class="demo-venture-item">Generates earned income that supports the ecosystem</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEN YEARS LATER -->
+  <section class="section future-section" aria-label="Ten years later">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--white">The Long View</span>
+      <h2 style="color:var(--white);">Imagine ten years later.</h2>
+      <p class="lora">What the investment produces — not all at once, but over time, as the ecosystem does what it was designed to do.</p>
+
+      <img
+        class="future-anchor-img"
+        src="https://bodytruthfamilyfarms.org/images/invest-exp-future-anchor.png"
+        alt="Looking forward — what becomes possible"
+        loading="lazy"
+      >
+
+      <div class="future-scenes">
+
+        <div class="future-scene">
+          <img class="future-scene-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-future-veteran.png" alt="A veteran finding purpose" loading="lazy">
+          <div class="future-scene-body">
+            <div class="future-scene-label">A veteran</div>
+            <p>He arrived not knowing why he came. Something about the garden made it feel possible to stay. He started in the maker space. Then took the Farm Systems Training. Then launched a small operation on land he had been sitting on for three years and didn't know what to do with. He comes back on Saturdays now to teach.</p>
+          </div>
+        </div>
+
+        <div class="future-scene future-scene--amber">
+          <img class="future-scene-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-future-woman.png" alt="A woman who almost didn't believe it" loading="lazy">
+          <div class="future-scene-body">
+            <div class="future-scene-label">A woman who almost didn't believe it</div>
+            <p>She applied twice before she came. She was not sure she qualified — not sure she was the kind of person things like this were actually for. She completed the Grant Readiness Bootcamp. Six months later she secured her first grant. Her nonprofit now has three employees and runs programs in two counties.</p>
+          </div>
+        </div>
+
+        <div class="future-scene future-scene--teal">
+          <img class="future-scene-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-future-child.png" alt="A child who visited once" loading="lazy">
+          <div class="future-scene-body">
+            <div class="future-scene-label">A child who visited once</div>
+            <p>Her mother brought her to a workshop when she was eight years old. She helped in the garden for an hour. She told someone at school that she wanted to grow things and sell them when she grew up. She did not know yet that she had already seen it being done — right there, on a Saturday morning, with her hands in the soil.</p>
+          </div>
+        </div>
+
+        <div class="future-scene future-scene--terra">
+          <img class="future-scene-img" src="https://bodytruthfamilyfarms.org/images/invest-exp-future-harvest.png" alt="A community that feeds itself" loading="lazy">
+          <div class="future-scene-body">
+            <div class="future-scene-label">A community that feeds itself</div>
+            <p>The harvest does not stay on campus. It moves into homes, into markets, into the hands of people who live close by. Food entrepreneurs who started in the teaching kitchen now sell at regional markets. Earth Keepers who started as volunteers now mentor the next round of growers. The ecosystem circulates.</p>
+          </div>
+        </div>
+
+        <div class="future-scene">
+          <div class="future-scene-body">
+            <div class="future-scene-label">People who became builders</div>
+            <p>They came invisible. Not to the world — invisible to themselves. They did not yet know what they were capable of. The campus gave them an environment where they could put down what they had been carrying long enough to remember. Most of them are still building. Some of them are teaching others how.</p>
+          </div>
+        </div>
+
+        <div class="future-scene future-scene--amber">
+          <div class="future-scene-body">
+            <div class="future-scene-label">The next ASC</div>
+            <p>Another closed school. Another community ready to grow. Another founder who dedicated their building to their hero. The Stockbridge model — documented, systematized, and proven — traveled. Because it was built to.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="section closing-section" aria-label="The invitation">
+    <div class="wrap closing-inner">
+      <span class="eyebrow eyebrow--white">The Invitation</span>
+      <h2>Artie Short is still growing things.</h2>
+      <p class="lora">We are building a center that carries his name while he is here to walk through the door.</p>
+      <p class="lora">The property exists. The methodology exists. The curriculum exists. The community exists. What is needed now is the capital to bring the physical home into being.</p>
+      <p class="lora">If you have read this far and something in you has settled — if the vision feels real and the work feels true — we would like to hear from you.</p>
+
+      <img
+        class="closing-img"
+        src="https://bodytruthfamilyfarms.org/images/invest-exp-closing-artie-stephanie.png"
+        alt="Artie Short and Stephanie Willis — father and daughter, in the garden"
+        loading="lazy"
+      >
+
+      <div class="cta-row">
+        <a href="invest.html" class="btn btn-amber">See the infrastructure →</a>
+        <a href="mailto:bodytruthfoundation@gmail.com" class="btn btn-outline-white">Start a conversation</a>
+      </div>
+      <div class="contact-block">
+        <p class="contact-name">Stephanie Willis</p>
+        <p class="contact-title">Founder &amp; Executive Director · Bodytruth Family Farms Educational Foundation, Inc.</p>
+        <div class="contact-links">
+          <a href="mailto:bodytruthfoundation@gmail.com" class="contact-link">bodytruthfoundation@gmail.com</a>
+          <a href="tel:7346200471" class="contact-link">734-620-0471</a>
+          <a href="https://bodytruthfamilyfarms.org" class="contact-link" target="_blank" rel="noopener">bodytruthfamilyfarms.org</a>
+          <a href="https://fundready.io" class="contact-link" target="_blank" rel="noopener">fundready.io</a>
+        </div>
+        <p class="contact-response">Response within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="height:6px; background:linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%);"></div>
+  <div style="background:var(--near-black); padding:0.75rem; text-align:center;">
+    <p style="font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin:0;">© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · Confidential · By Invitation Only</p>
+  </div>
+
+</body>
+</html>

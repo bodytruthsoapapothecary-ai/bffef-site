@@ -531,6 +531,40 @@
 
 <body>
 
+  <style>
+    .version-nav {
+      background: var(--forest);
+      padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.75rem;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .version-nav-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+    .version-nav-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .version-pill {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.3rem 0.9rem;
+      border-radius: 100px; transition: all 0.15s;
+    }
+    .version-pill--active { background: var(--bright-green); color: var(--white); }
+    .version-pill--inactive {
+      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .version-pill--inactive:hover { background: rgba(255,255,255,0.14); color: var(--white); }
+  </style>
+
+  <nav class="version-nav" aria-label="Page versions">
+    <span class="version-nav-label">Two ways to explore the vision</span>
+    <div class="version-nav-links">
+      <a href="invest-experience.html" class="version-pill version-pill--inactive">The Experience →</a>
+      <span class="version-pill version-pill--active">The Infrastructure</span>
+    </div>
+  </nav>
+
   <div class="confidential-bar">
     <p>Confidential · By Invitation Only · Bodytruth Family Farms Educational Foundation, Inc. · 2026</p>
   </div>
