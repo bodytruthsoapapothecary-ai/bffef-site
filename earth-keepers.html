@@ -1444,7 +1444,9 @@
           <h3>Earth Keeper Application</h3>
           <p class="form-sub">We match every applicant to the role that fits best.</p>
 
-          <form action="#" method="POST" novalidate>
+          <form name="earth-keepers-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+            <input type="hidden" name="form-name" value="earth-keepers-application">
+            <p style="display:none;"><input name="bot-field"></p>
 
             <div class="fg-row">
               <div class="fg">

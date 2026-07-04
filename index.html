@@ -2070,7 +2070,9 @@
           <h3>Tell Us Who You Are</h3>
           <p class="form-subtitle">We read every submission and respond personally within 24 hours.</p>
 
-          <form action="#" method="POST" novalidate>
+          <form name="contact-enrollment" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+            <input type="hidden" name="form-name" value="contact-enrollment">
+            <p style="display:none;"><input name="bot-field"></p>
 
             <div class="form-row">
               <div class="form-group">

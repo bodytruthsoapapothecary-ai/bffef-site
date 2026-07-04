@@ -10,4 +10,25 @@
   <url><loc>https://www.bodytruthfamilyfarms.org/partner.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.bodytruthfamilyfarms.org/privacy-policy.html</loc><lastmod>2026-06-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.bodytruthfamilyfarms.org/terms-of-use.html</loc><lastmod>2026-06-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url>
+    <loc>https://www.bodytruthfamilyfarms.org/invest.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bodytruthfamilyfarms.org/invest-experience.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bodytruthfamilyfarms.org/restoration-initiative.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

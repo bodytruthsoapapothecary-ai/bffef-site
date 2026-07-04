@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://bodytruthfamilyfarms.org/images/og-invest.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="description" content="The Restoration Initiative — The Ancestral Blueprint for the New Generation. Bodytruth Family Farms Educational Foundation.">
+  <title>The Restoration Initiative — Bodytruth Family Farms Educational Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-green:   #2d6a1f;
+      --bright-green: #62af41;
+      --forest:       #1a3a1f;
+      --amber:        #e8a020;
+      --amber-light:  #fdf3dc;
+      --terracotta:   #c4622d;
+      --teal:         #2a8a7e;
+      --teal-light:   #e6f5f3;
+      --white:        #ffffff;
+      --warm-white:   #fafaf8;
+      --near-black:   #1a1a1a;
+      --text-body:    #2c2c2c;
+      --text-muted:   #6b6b6b;
+      --rule:         rgba(0,0,0,0.08);
+      --max-width:    1200px;
+      --radius:       10px;
+      --radius-sm:    6px;
+      --radius-lg:    18px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; text-decoration: none; }
+    h1  { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 1.0; }
+    h2  { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(1.9rem, 4vw, 2.9rem); }
+    h3  { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; font-size: clamp(1.1rem, 2vw, 1.5rem); }
+    .lora        { font-family: 'Lora', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
+    .lora-italic { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; }
+    .eyebrow {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--bright-green); margin-bottom: 0.9rem;
+    }
+    .eyebrow--amber { color: var(--amber); }
+    .eyebrow--white { color: rgba(255,255,255,0.65); }
+    .eyebrow--teal  { color: var(--teal); }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    @media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+    .section { padding: 5.5rem 0; }
+    @media (min-width: 768px) { .section { padding: 7.5rem 0; } }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600;
+      padding: 0.9rem 1.9rem; border-radius: var(--radius-sm);
+      border: none; cursor: pointer; transition: all 0.18s ease; min-height: 52px;
+    }
+    .btn-green { background: var(--bright-green); color: var(--white); }
+    .btn-green:hover { background: var(--deep-green); }
+    .btn-amber { background: var(--amber); color: var(--white); }
+    .btn-amber:hover { background: #c8891a; }
+    .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.55); }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+    .pull-quote {
+      border-left: 4px solid var(--amber); padding: 1.25rem 1.5rem;
+      background: var(--amber-light); border-radius: 0 var(--radius) var(--radius) 0; margin: 2rem 0;
+    }
+    .pull-quote p { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--near-black); line-height: 1.75; margin: 0; }
+    .pull-quote--dark { background: rgba(255,255,255,0.06); border-color: var(--amber); }
+    .pull-quote--dark p { color: rgba(255,255,255,0.88); }
+
+    /* VERSION NAV */
+    .version-nav {
+      background: var(--forest); padding: 0.7rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.6rem; position: sticky; top: 0; z-index: 100;
+    }
+    .version-nav-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .version-nav-links { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .version-pill { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.28rem 0.85rem; border-radius: 100px; transition: all 0.15s; }
+    .version-pill--active { background: var(--bright-green); color: var(--white); }
+    .version-pill--inactive { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.12); }
+    .version-pill--inactive:hover { background: rgba(255,255,255,0.14); color: var(--white); }
+
+    /* HERO */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: flex-end;
+      overflow: hidden; background: var(--forest);
+    }
+    .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: 0.5; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,20,10,0.97) 0%, rgba(10,20,10,0.5) 55%, rgba(10,20,10,0.12) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; width: 100%; padding: 0 0 5rem; }
+    .hero h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); color: var(--white); margin-bottom: 1.5rem; max-width: 900px; }
+    .hero h1 em { font-family: 'Lora', Georgia, serif; font-style: italic; color: var(--bright-green); font-weight: 400; }
+    .hero-sub { font-family: 'Lora', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.2rem); color: rgba(255,255,255,0.72); max-width: 640px; line-height: 1.9; margin-bottom: 2.5rem; }
+    .hero-dedication { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .hero-dedication-desc { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.25rem; }
+    .hero-dedication-name { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 1rem; color: var(--bright-green); }
+
+    /* ROOT SECTION */
+    .root-section { background: var(--white); }
+    .root-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+    @media (min-width: 768px) { .root-grid { grid-template-columns: 1fr 1fr; gap: 5rem; } }
+    .root-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); }
+    .root-text p { color: var(--near-black); margin-bottom: 1.25rem; font-size: 0.97rem; }
+    .root-text p:last-child { margin-bottom: 0; }
+    /* WHAT WE ARE BUILDING */
+    .build-section { background: var(--warm-white); }
+    .build-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    @media (min-width: 640px)  { .build-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .build-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .build-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem; border: 1.5px solid var(--rule);
+    }
+    .build-card-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bright-green); margin-bottom: 0.6rem; }
+    .build-card h3 { font-size: 1rem; color: var(--near-black); margin-bottom: 0.5rem; letter-spacing: 0; }
+    .build-card p { font-size: 0.88rem; color: var(--near-black); line-height: 1.7; margin: 0; }
+
+    /* ARTIE */
+    .artie-section { background: var(--forest); }
+    .artie-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+    @media (min-width: 768px) { .artie-grid { grid-template-columns: 1fr 1fr; gap: 5rem; } }
+    .artie-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); }
+    .artie-text p { color: var(--white); margin-bottom: 1.25rem; font-size: 0.97rem; }
+    .artie-text p:last-child { margin-bottom: 0; }
+
+    /* TIERS */
+    .tiers-section { background: var(--white); }
+    .tiers-intro { color: var(--near-black); max-width: 680px; margin-top: 1rem; margin-bottom: 3rem; font-family: 'Lora', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.15rem); line-height: 1.9; }
+    .tier-card {
+      background: var(--warm-white); border-radius: var(--radius-lg);
+      border: 1.5px solid var(--rule); overflow: hidden; margin-bottom: 1rem;
+    }
+    .tier-card--anchor { background: var(--forest); border-color: var(--forest); }
+    .tier-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 1.75rem; background: var(--white);
+      border-bottom: 1.5px solid var(--rule); flex-wrap: wrap; gap: 0.5rem;
+    }
+    .tier-card--anchor .tier-header { background: var(--deep-green); border-bottom-color: rgba(255,255,255,0.1); }
+    .tier-name { font-size: 1.05rem; font-weight: 700; color: var(--near-black); }
+    .tier-card--anchor .tier-name { color: var(--white); }
+    .tier-amount { font-size: 1.05rem; font-weight: 800; color: var(--amber); letter-spacing: -0.01em; }
+    .tier-body { display: grid; grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .tier-body { grid-template-columns: 1fr 1fr; } }
+    .tier-col { padding: 1.5rem 1.75rem; }
+    .tier-col + .tier-col { border-top: 1.5px solid var(--rule); }
+    @media (min-width: 640px) { .tier-col + .tier-col { border-top: none; border-left: 1.5px solid var(--rule); } }
+    .tier-card--anchor .tier-col + .tier-col { border-color: rgba(255,255,255,0.1); }
+    .tier-col-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; }
+    .tier-card--anchor .tier-col-label { color: rgba(255,255,255,0.45); }
+    .tier-col p { font-size: 0.9rem; color: var(--near-black); line-height: 1.75; margin: 0; }
+    .tier-card--anchor .tier-col p { color: var(--white); }
+
+    /* BOOKS */
+    .books-section { background: var(--warm-white); }
+    .books-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2.5rem; }
+    @media (min-width: 640px) { .books-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .book-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem 1.75rem; border: 1.5px solid var(--rule); }
+    .book-status { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .book-status--available { color: var(--bright-green); }
+    .book-status--launch { color: var(--amber); }
+    .book-card h3 { font-size: 1rem; color: var(--near-black); margin-bottom: 0.6rem; letter-spacing: 0; }
+    .book-card p { font-size: 0.88rem; color: var(--near-black); line-height: 1.7; margin: 0; }
+    .book-link { margin-top: 1.25rem; }
+    .book-link a { font-size: 0.85rem; font-weight: 600; color: var(--deep-green); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* IMPACT */
+    .impact-section { background: var(--deep-green); }
+    .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.1); border-radius: var(--radius-lg); overflow: hidden; margin-top: 2.5rem; }
+    @media (min-width: 640px) { .impact-grid { grid-template-columns: repeat(4, 1fr); } }
+    .impact-cell { background: var(--forest); padding: 2rem 1.5rem; text-align: center; }
+    .impact-num { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--amber); letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.5rem; }
+    .impact-label { font-size: 0.82rem; color: rgba(255,255,255,0.9); line-height: 1.5; }
+    .impact-note { margin-top: 2.5rem; max-width: 680px; }
+    .impact-note p { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: clamp(1rem, 2vw, 1.15rem); color: var(--white); line-height: 1.85; margin-bottom: 1rem; }
+    .impact-note p:last-child { margin-bottom: 0; }
+
+    /* CLOSING */
+    .closing-section { background: var(--forest); }
+    .closing-inner { max-width: 760px; }
+    .closing-section h2 { color: var(--white); margin-bottom: 1.5rem; }
+    .closing-section .lora { color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; }
+    .closing-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); margin: 2.5rem 0; }
+    .contact-block { margin-top: 2.5rem; padding: 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); }
+    .contact-name { font-weight: 700; color: var(--white); font-size: 1rem; }
+    .contact-title { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+    .contact-link { font-size: 0.88rem; color: var(--bright-green); font-weight: 600; transition: color 0.15s; }
+    .contact-link:hover { color: var(--white); }
+    .contact-response { margin-top: 0.9rem; font-size: 0.78rem; color: rgba(255,255,255,0.3); font-style: italic; }
+
+    /* DISCLOSURE */
+    .disclosure { background: rgba(255,255,255,0.03); border-top: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; }
+    .disclosure p { font-size: 0.78rem; color: rgba(255,255,255,0.35); line-height: 1.7; max-width: 860px; margin: 0 auto; text-align: center; }
+
+    /* FOOTER */
+    .footer-stripe { height: 6px; background: linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%); }
+    .footer-bar { background: var(--near-black); padding: 0.75rem; text-align: center; }
+    .footer-bar p { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- VERSION NAV -->
+  <nav class="version-nav" aria-label="Page versions">
+    <a href="https://bodytruthfamilyfarms.org" style="display:flex; align-items:center; flex-shrink:0;">
+      <img src="https://bodytruthfamilyfarms.org/images/BFFEFInclogoVersion2Transparent.png" alt="Bodytruth Family Farms Educational Foundation" style="height:32px; width:auto;">
+    </a>
+    <div class="version-nav-links">
+      <a href="invest-experience.html" class="version-pill version-pill--inactive">The Experience</a>
+      <a href="invest.html" class="version-pill version-pill--inactive">The Infrastructure</a>
+      <span class="version-pill version-pill--active">The Initiative</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Opening">
+    <img class="hero-bg" src="https://bodytruthfamilyfarms.org/images/invest-exp-hero.jpg" alt="The Restoration Initiative" fetchpriority="high">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <span class="eyebrow eyebrow--white">The Restoration Initiative</span>
+        <h1>The Ancestral Blueprint<br>for the <strong><em>New Generation</em></strong></h1>
+        <p class="hero-sub">
+          We are establishing an intergenerational, land-based cooperative enterprise — rooted in South Carolina. We envision community where we learn, grow, build, teach, and trade fairly in the marketplaces we create. We value our land and the land supports us. We value our wisdom, and that wisdom carries us. Built by people who understand that generational wealth begins with the ground beneath you.
+        </p>
+        <div class="cta-row">
+          <a href="#tiers" class="btn btn-green">Build With Us</a>
+          <a href="#tiers" class="btn btn-outline-white">Ways to Build With Us</a>
+        </div>
+        <div class="hero-dedication">
+          <p class="hero-dedication-desc">Named in honor of</p>
+          <p class="hero-dedication-name">Artie Short — Father, Veteran, Uncle, Husband, Grandfather, Brother, Friend</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ROOT -->
+  <section class="section root-section" aria-label="The root">
+    <div class="wrap">
+      <div class="root-grid">
+        <img
+          class="root-img"
+          src="https://bodytruthfamilyfarms.org/images/invest-exp-observation-artie.jpg"
+          alt="Artie Short — Vietnam Veteran, in his garden"
+          loading="lazy"
+        >
+        <div class="root-text">
+          <span class="eyebrow">The Root</span>
+          <h2>It started with a man who found peace in a garden.</h2>
+          <p class="lora" style="margin-top:1.25rem; color:var(--text-body);">
+            Artie Short — Vietnam Veteran — spent his life fishing, cooking, growing, and showing people how to do all of it. His daughter Stephanie watched. And never forgot.
+          </p>
+          <p>
+            For seventeen years, that observation became the engine behind everything built. A home garden became a community garden. A community garden became an apothecary business and the foundation of an intentional community. Those experiences produced foundational programs and a patent-pending capital readiness methodology that creates a roadmap for others seeking to develop a land-based enterprise and intergenerational wealth.
+          </p>
+          <p>
+            The Restoration Initiative is where all of it lands. South Carolina. Cooperative land ownership. A working farm and apothecary. A community that builds together, holds knowledge together, and sustains itself on ground that belongs to the people who tend it.
+          </p>
+          <p>
+            We have joined the <strong><em>Federation of Southern Cooperatives</em></strong> — 58 years of Black land retention, cooperative ownership, and advocacy. We are identifying land. We are ready to build.
+          </p>
+          <p>We are inviting those who are ready to build alongside us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE ARE BUILDING -->
+  <section class="section build-section" aria-label="What we are building">
+    <div class="wrap">
+      <span class="eyebrow">The Vision</span>
+      <h2>What we are building.</h2>
+      <p class="lora" style="margin-top:1rem; max-width:680px; color:var(--near-black);">
+        A multi-structure property in South Carolina. Each piece sustains the others. None of it depends on a single funder, program, or system to survive.
+      </p>
+      <div class="build-grid">
+        <div class="build-card">
+          <div class="build-card-tag">The Farm</div>
+          <h3>Working Land</h3>
+          <p>Growing beds, hoop houses, seasonal harvests. Food produced on land we own, distributed through networks we build. The Earth Keepers tend it. The community eats from it.</p>
+        </div>
+        <div class="build-card">
+          <div class="build-card-tag">The Apothecary</div>
+          <h3>From the Kitchen with Stephanie</h3>
+          <p>Small-batch, handcrafted botanical soap and skin care. Clean ingredients, honest formulation, seventeen years of practice. A production enterprise rooted in the land it grows from.</p>
+        </div>
+        <div class="build-card">
+          <div class="build-card-tag">The Community</div>
+          <h3>Intentional Living as a Model</h3>
+          <p>Gathering spaces, and the model of a live-work-grow environment for people who are seeking to build meaningful lives on their own terms.</p>
+        </div>
+        <div class="build-card">
+          <div class="build-card-tag">The Methodology</div>
+          <h3>FundReady</h3>
+          <p>Patent-pending capital readiness infrastructure for Black and brown farmers, landowners, cooperatives, and nonprofits. The curriculum is licensed to the Foundation and available for program delivery.</p>
+        </div>
+        <div class="build-card">
+          <div class="build-card-tag">The Commons</div>
+          <h3>Living Resource Library</h3>
+          <p>A growing digital knowledge commons — videos, tools, e-books, recipes, best practices, and contributed wisdom from practitioners across the cooperative network. Also technical assistance, income diversification, capital strategies, and curated grant opportunities from FundReady.</p>
+        </div>
+        <div class="build-card">
+          <div class="build-card-tag">The Blueprint</div>
+          <h3>Built to Replicate</h3>
+          <p>Documented systems so the next community can build their own version without starting from zero. The intention from the beginning has been to build something replicable so we can restore a way of life and secure meaningful marketplace opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK -->
+  <div style="width:100%; aspect-ratio:21/6; overflow:hidden;">
+    <img
+      src="https://bodytruthfamilyfarms.org/images/invest-exp-future-harvest.jpg"
+      alt="Harvest from the land"
+      loading="lazy"
+      style="width:100%; height:100%; object-fit:cover; object-position:center 60%;"
+    >
+  </div>
+
+  <!-- ARTIE -->
+  <section class="section artie-section" aria-label="Artie Short">
+    <div class="wrap">
+      <div class="artie-grid">
+        <div class="artie-text">
+          <span class="eyebrow eyebrow--white">The Dedication</span>
+          <h2 style="color:var(--white);">The ASC.<br>The Artie Short Community.</h2>
+          <p class="lora" style="color:rgba(255,255,255,0.82); margin-top:1.25rem;">
+            He spent his life fishing, cooking, growing, and showing people how. That presence — quiet, consistent, unglamorous — produced a daughter who built an ecosystem.
+          </p>
+          <p>
+            We are building this center while he is here to see the impact he has made on others through our work.
+          </p>
+          <div class="pull-quote pull-quote--dark">
+            <p>Whoever replicates this model dedicates their building to their own hero. That is how culture travels — not through branding, but through naming what matters.</p>
+          </div>
+          <p>The Restoration Initiative is the proof of what becomes possible when one person in a lineage decides to break the cycle and build something that lasts.</p>
+        </div>
+        <img
+          class="artie-img"
+          src="https://bodytruthfamilyfarms.org/images/invest-exp-closing-artie-stephanie.jpg"
+          alt="Artie Short and Stephanie Willis — father and daughter, in the garden"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section class="section tiers-section" id="tiers" aria-label="Stakeholder tiers">
+    <div class="wrap">
+      <span class="eyebrow">The Sovereign Blueprint</span>
+      <h2>Ways to Build With Us.</h2>
+      <p class="tiers-intro">
+        This is not a donation. It is a structured exchange — everyone leaves with something of real value. Every offering on this page is priced at market rate. If you purchased these services elsewhere, you would expect to pay the same or more. The difference is that here, your investment does two things at once: it strengthens your own organization — or one you choose to sponsor — and it helps build The Restoration Initiative. This is how the model works. Not dependency. Reciprocity.
+      </p>
+
+      <!-- Contributor -->
+      <div class="tier-card">
+        <div class="tier-header">
+          <div class="tier-name">The Contributor</div>
+          <div class="tier-amount">$100</div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-col">
+            <div class="tier-col-label">What You Receive</div>
+            <p>Choose one of Stephanie's published works — <em>Reboot</em>, <em>Covenant Breaking Prayers</em>, or <em>Dethroning Fatherlessness</em> (available upon release) — as your introduction to the ideas that inspired The Restoration Initiative.</p>
+            <p style="margin-top:1rem;">As the Living Resource Library grows, you will also receive early updates highlighting new resources, field notes, and milestones made possible through the community that is building this work together.</p>
+          </div>
+          <div class="tier-col">
+            <div class="tier-col-label">What Your Investment Does</div>
+            <p>Your contribution helps build the Living Resource Library — a growing collection of practical tools, educational resources, recipes, videos, and documented knowledge that will be shared across the cooperative network and continue expanding for years to come.</p>
+            <p style="margin-top:1rem;">You become one of the people who helped build this from the beginning. The book simply commemorates that decision.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Field Operator -->
+      <div class="tier-card">
+        <div class="tier-header">
+          <div class="tier-name">The Field Operator</div>
+          <div class="tier-amount">$1,500</div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-col">
+            <div class="tier-col-label">What You Receive</div>
+            <p>Working alongside Stephanie in a live cohort, we build your business enterprise into a fundable, operational asset together — diversified revenue streams, a risk reduction framework, a growth strategy, a talent plan for who your business needs next, and the systems to apply for and manage capital with confidence. Take it for your own business, or sponsor an aspiring business owner who is ready to build. When you invest in someone else's seat, you become the grant-maker in their story.</p>
+          </div>
+          <div class="tier-col">
+            <div class="tier-col-label">What Your Investment Does</div>
+            <p>Funds the development of a resource stack — the knowledge, skills, and tools to optimize resources, steward responsibly, delegate clearly, perform at a high level, and scale when ready. You walk away with a documented roadmap, implementation plans, KPIs, and measurement systems — a closed-loop system that gives a small outfit access to the same tools corporations use to perform and scale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategist -->
+      <div class="tier-card">
+        <div class="tier-header">
+          <div class="tier-name">The Strategist</div>
+          <div class="tier-amount">$4,500</div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-col">
+            <div class="tier-col-label">What You Receive</div>
+            <p>Working alongside Stephanie in a live cohort, we build your nonprofit's fundable and operational infrastructure together — streamlined program evaluation and impact reporting, an operations plan, your organization's intelligence organized into fundable assets, diversified revenue streams, a risk reduction framework, and a talent strategy for the mission ahead. Bring it to your own organization, or gift it to a mission-driven leader whose work needs this foundation.</p>
+          </div>
+          <div class="tier-col">
+            <div class="tier-col-label">What Your Investment Does</div>
+            <p>Funds the development of a resource stack — the knowledge, skills, and tools to optimize resources, steward responsibly, delegate clearly, perform at a high level, and scale when ready. You walk away with a documented roadmap, implementation plans, KPIs, and measurement systems — a closed-loop system that gives a nonprofit access to the same tools corporations use to perform and scale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Replicator -->
+      <div class="tier-card">
+        <div class="tier-header">
+          <div class="tier-name">The Replicator</div>
+          <div class="tier-amount">$7,500</div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-col">
+            <div class="tier-col-label">What You Receive</div>
+            <p>Working alongside Stephanie, we build your dual-entity ecosystem together — a nonprofit and a for-profit structured to work in tandem, the way ours does. You leave with both entities organized into fundable, operational assets: diversified revenue plans across the structure, a risk reduction framework, a talent strategy for each entity, and the systems to apply for and manage capital and grants across both sides.</p>
+          </div>
+          <div class="tier-col">
+            <div class="tier-col-label">What Your Investment Does</div>
+            <p>Funds the development of a resource stack — the knowledge, skills, and tools to optimize resources, steward responsibly, delegate clearly, perform at a high level, and scale when ready, across two connected entities instead of one. You walk away with a documented roadmap, implementation plans, KPIs, and measurement systems for both sides. Includes early access to the Co-Op Blueprint as it is built, full Living Resource Library access, and ongoing grant-related technical assistance. You become part of the community by default — because you are now operating the same model you learned to build.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legacy Partner -->
+      <div class="tier-card tier-card--anchor">
+        <div class="tier-header">
+          <div class="tier-name">The Legacy Partner</div>
+          <div class="tier-amount">$12,000</div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-col">
+            <div class="tier-col-label">What You Receive</div>
+            <p>A complete, done-for-you organizational capacity buildout for a nonprofit that is ready to grow but lacks the internal time or expertise to build the infrastructure itself.</p>
+            <p style="margin-top:1rem;">Over the course of a 12-week high-touch engagement, we work closely with your leadership team to understand how your organization operates today and where it needs to go tomorrow. Through discovery, analysis, and strategic development, we build the operational foundation your organization needs to pursue funding with confidence and scale its mission responsibly. By the end of the engagement, the organization receives a comprehensive infrastructure designed specifically for its mission, including grant readiness, organizational architecture, operational documentation, financial and administrative systems, diversified revenue strategies, implementation roadmaps, and the tools needed to measure and communicate impact.</p>
+            <p style="margin-top:1rem;">You may invest in your own organization, or sponsor another nonprofit whose mission you believe deserves that same foundation.</p>
+          </div>
+          <div class="tier-col">
+            <div class="tier-col-label">What Your Investment Does</div>
+            <p>Your investment strengthens two organizations at once. One nonprofit receives the operational infrastructure it needs to pursue sustainable growth, while the proceeds help establish The Restoration Initiative — a permanent land-based learning community where entrepreneurs, growers, nonprofits, and future generations will come to learn, build, and create lasting economic opportunity.</p>
+            <p style="margin-top:1rem;">It is the highest-impact engagement we offer because its impact extends well beyond a single organization. It equips one mission to thrive while helping lay the foundation for another.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section class="section books-section" aria-label="The written works">
+    <div class="wrap">
+      <span class="eyebrow">The Written Works</span>
+      <h2>The thinking behind the work.</h2>
+      <p class="lora" style="margin-top:1rem; max-width:680px; color:var(--text-muted);">
+        These books represent the philosophy and methodology behind The Restoration Initiative. They are available individually through Amazon for anyone who wants to engage with the ideas directly — and they are the introduction included with The Contributor tier above.
+      </p>
+      <div class="books-grid">
+
+        <div class="book-card">
+          <div class="book-status book-status--available">Available Now on Amazon</div>
+          <h3>Reboot</h3>
+          <p>Organizational and personal transformation for nonprofits, teams, and individuals ready to begin again with clarity and intention. The book you hand someone who knows they need a reset but does not know where to start.</p>
+          <div class="book-link"><a href="https://amazon.com" target="_blank" rel="noopener">Find on Amazon →</a></div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-status book-status--available">Available Now on Amazon</div>
+          <h3>Covenant Breaking Prayers</h3>
+          <p>Spiritual tools for breaking generational cycles — written for those who understand that restoration begins in the spirit before it takes root in the soil. For communities rooted in faith and in the long arc of healing.</p>
+          <div class="book-link"><a href="https://amazon.com" target="_blank" rel="noopener">Find on Amazon →</a></div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-status book-status--launch">Launching August 26, 2026</div>
+          <h3>Dethroning Fatherlessness</h3>
+          <p>How the system replaced God with government — and what becomes possible when presence is restored. The thesis underneath everything being built here.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section impact-section" aria-label="Year one impact">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--white">Year One</span>
+      <h2 style="color:var(--white);">What this produces.</h2>
+      <div class="impact-grid">
+        <div class="impact-cell">
+          <div class="impact-num">72–108</div>
+          <div class="impact-label">Entrepreneurs, growers, and nonprofits enrolled</div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num">61–92</div>
+          <div class="impact-label">Capital Plans produced — business plans, capital maps</div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num">25–35</div>
+          <div class="impact-label">Enterprises launched or advanced toward implementation</div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num">50–100+</div>
+          <div class="impact-label">Jobs and income opportunities created across the ecosystem — direct campus roles and participant ventures</div>
+        </div>
+      </div>
+      <div class="impact-note">
+        <p>Contributors at every tier receive periodic updates showing what their investment produced — enterprises launched, participants funded, knowledge shared, land acquired. Outcomes, not reports.</p>
+        <p>We track what participants build after they leave — enterprise survival, funding secured, jobs created, income growth, community contribution. The program is the beginning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK -->
+  <div style="width:100%; aspect-ratio:21/6; overflow:hidden;">
+    <img
+      src="https://bodytruthfamilyfarms.org/images/invest-exp-morning-wide.jpg"
+      alt="The grounds at morning"
+      loading="lazy"
+      style="width:100%; height:100%; object-fit:cover; object-position:center 40%; opacity:0.9;"
+    >
+  </div>
+
+  <!-- CLOSING -->
+  <section class="section closing-section" aria-label="The invitation" style="padding-bottom:0;">
+    <div class="wrap closing-inner">
+      <span class="eyebrow eyebrow--white">The Invitation</span>
+      <h2>Artie Short is still growing things.</h2>
+      <p class="lora">We are building a center that carries his name while he is here to see the impact he has made on others through our work.</p>
+      <p class="lora">We have the land in our sights. We have joined the <strong><em>Federation of Southern Cooperatives</em></strong>. We have the methodology, the curriculum, the ecosystem structure, and seventeen years of proof.</p>
+      <p class="lora">What we need now is the community that believes what we believe — that land held cooperatively, knowledge shared freely, and enterprises built without dependency produce something that sustains itself across generations.</p>
+
+      <img
+        class="closing-img"
+        src="https://bodytruthfamilyfarms.org/images/invest-exp-closing-artie-stephanie.jpg"
+        alt="Artie Short and Stephanie Willis — father and daughter, in the garden"
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <style>
+    .faq-section { background: var(--forest); padding-top: 2rem; }
+    .faq-list { max-width: 760px; margin-top: 2.5rem; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 1.35rem 0; display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; text-align: left; font-family: 'Inter', sans-serif;
+      font-size: 0.98rem; font-weight: 600; color: var(--white);
+    }
+    .faq-q:hover { color: var(--bright-green); }
+    .faq-chevron { font-size: 0.7rem; color: rgba(255,255,255,0.4); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-chevron.open { transform: rotate(180deg); color: var(--bright-green); }
+    .faq-a { display: none; padding: 0 0 1.5rem; font-size: 0.92rem; color: rgba(255,255,255,0.72); line-height: 1.8; max-width: 680px; }
+    .faq-a.open { display: block; }
+  </style>
+  <section class="section faq-section" aria-label="Frequently asked questions">
+    <div class="wrap closing-inner">
+      <span class="eyebrow eyebrow--white">Questions</span>
+      <h2 style="color:var(--white); font-size:clamp(1.75rem, 3.5vw, 2.5rem);">Before you build with us.</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Why doesn't Bodytruth ask for donations?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-a">
+            Because dependency is not what we are building. Every tier on this page is priced at market rate for real work — a book, a bootcamp, a full organizational buildout. What you receive has value whether or not you ever hear from us again. That is the difference between charity and exchange, and it is the model we want this Initiative to prove works.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            How does the value exchange model work?
+          </button>
+          <div class="faq-a">
+            You choose a tier based on what you need or want to fund. You receive something real in return — a manuscript, a bootcamp seat, a full capacity-building engagement. The proceeds from that exchange help capitalize The Restoration Initiative. Nobody is asked to give something for nothing, and nobody receives something without contributing to what is being built.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Can I sponsor another business or nonprofit instead of using this myself?
+          </button>
+          <div class="faq-a">
+            Yes. Every tier from The Field Operator through The Legacy Partner can be taken for your own organization or gifted to someone whose work you believe in. When you sponsor someone else's seat, you become the grant-maker in their story — and the person or organization you sponsor receives the full engagement in their name.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            What happens during the Legacy Partner's 12-week engagement?
+          </button>
+          <div class="faq-a">
+            We work closely with your leadership team through discovery, analysis, and strategic development. By the end, your organization has grant readiness, organizational architecture, operational documentation, financial and administrative systems, diversified revenue strategies, implementation roadmaps, and the tools to measure and communicate impact — built specifically for your mission, not templated.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is my contribution tax-deductible?
+          </button>
+          <div class="faq-a">
+            Not yet. Bodytruth Family Farms Educational Foundation's 501(c)(3) status is currently pending. Once approved, future contributions may qualify. We will be transparent about that status as it changes.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            What makes FundReady different from other capacity-building programs?
+          </button>
+          <div class="faq-a">
+            Most programs hand you templates and send you on your way. FundReady is a patent-pending methodology built specifically to close the infrastructure gap for Black and brown farmers, landowners, cooperatives, and nonprofits — organizing your capacity into fundable, documented assets rather than generic advice. It was built from lived experience, not theory.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = answer.classList.contains('open');
+      answer.classList.toggle('open', !isOpen);
+      if (chevron) chevron.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why doesn't Bodytruth ask for donations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because dependency is not what we are building. Every tier is priced at market rate for real work — a book, a bootcamp, a full organizational buildout. What you receive has value whether or not you ever hear from us again. That is the difference between charity and exchange, and it is the model we want this Initiative to prove works."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the value exchange model work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You choose a tier based on what you need or want to fund. You receive something real in return — a manuscript, a bootcamp seat, a full capacity-building engagement. The proceeds from that exchange help capitalize The Restoration Initiative."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I sponsor another business or nonprofit instead of using this myself?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every tier from The Field Operator through The Legacy Partner can be taken for your own organization or gifted to someone whose work you believe in. When you sponsor someone else's seat, you become the grant-maker in their story."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens during the Legacy Partner's 12-week engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work closely with your leadership team through discovery, analysis, and strategic development. By the end, your organization has grant readiness, organizational architecture, operational documentation, financial and administrative systems, diversified revenue strategies, implementation roadmaps, and the tools to measure and communicate impact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my contribution tax-deductible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not yet. Bodytruth Family Farms Educational Foundation's 501(c)(3) status is currently pending. Once approved, future contributions may qualify."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes FundReady different from other capacity-building programs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most programs hand you templates and send you on your way. FundReady is a patent-pending methodology built specifically to close the infrastructure gap for Black and brown farmers, landowners, cooperatives, and nonprofits — organizing capacity into fundable, documented assets rather than generic advice."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <section class="section closing-section" aria-label="Contact and call to action" style="padding-top:2rem;">
+    <div class="wrap closing-inner">
+      <div class="cta-row">
+        <a href="#tiers" class="btn btn-amber">Build With Us</a>
+        <a href="invest.html" class="btn btn-outline-white">See the Infrastructure →</a>
+      </div>
+
+      <div class="contact-block">
+        <p class="contact-name">Stephanie Willis</p>
+        <p class="contact-title">Founder &amp; Executive Director · Bodytruth Family Farms Educational Foundation, Inc.</p>
+        <div class="contact-links">
+          <a href="mailto:bodytruthfoundation@gmail.com" class="contact-link">bodytruthfoundation@gmail.com</a>
+          <a href="https://bodytruthfamilyfarms.org" class="contact-link" target="_blank" rel="noopener">bodytruthfamilyfarms.org</a>
+          <a href="https://fundready.io" class="contact-link" target="_blank" rel="noopener">fundready.io</a>
+        </div>
+        <p class="contact-response">Response within 24 hours.</p>
+      </div>
+
+      <div class="disclosure">
+        <p>
+          501(c)(3) status pending — contributions are not yet tax-deductible.
+          <em>Reboot</em> and <em>Covenant Breaking Prayers</em> are available now on Amazon.
+          <em>Dethroning Fatherlessness</em> launches August 26, 2026.
+          The Co-Op Blueprint is in active development — Replicator contributors shape it as it is built.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="height:6px; background:linear-gradient(90deg, var(--bright-green) 0%, var(--teal) 50%, var(--amber) 100%);"></div>
+  <div style="background:var(--near-black); padding:0.75rem; text-align:center;">
+    <p style="font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin:0;">© 2026 Bodytruth Family Farms Educational Foundation, Inc. · 501(c)(3) Status Pending · The Restoration Initiative</p>
+  </div>
+
+</body>
+</html>

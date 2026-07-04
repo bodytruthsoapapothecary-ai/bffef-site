@@ -725,7 +725,9 @@
           <h3>Partnership Inquiry</h3>
           <p class="form-sub">We respond personally to every message.</p>
 
-          <form action="#" method="POST" novalidate>
+          <form name="partnership-inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+            <input type="hidden" name="form-name" value="partnership-inquiry">
+            <p style="display:none;"><input name="bot-field"></p>
             <div class="fg-row">
               <div class="fg">
                 <label for="p-fname">First Name</label>
